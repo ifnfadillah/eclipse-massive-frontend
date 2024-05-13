@@ -1,12 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import HomeDashboard from "./pages/dashboard/HomeDashboard";
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl text-blue-400">Hello World</h1>
+      <Routes>
+        <Route path="/" element={<HomeDashboard />} />
+      </Routes>
     </>
   );
 }
