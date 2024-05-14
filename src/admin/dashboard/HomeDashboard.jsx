@@ -1,4 +1,4 @@
-import NavDashboard from "../components/navbar";
+import NavDashboard from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 
 function HomeDashboard() {

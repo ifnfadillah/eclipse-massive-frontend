@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import HomeDashboard from "./admin/dashboard/HomeDashboard";
-import Login from "./admin/login/Login";
+import HomeDashboard from "./admin/Dashboard/HomeDashboard";
+import Login from "./admin/Login/Login";
 
 function App() {
   return (
