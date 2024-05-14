@@ -1,12 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
 import HomeDashboard from "./admin/dashboard/HomeDashboard";
+import Login from "./admin/login/Login";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomeDashboard />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<HomeDashboard />} />
       </Routes>
     </>
   );
