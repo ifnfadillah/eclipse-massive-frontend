@@ -1,10 +1,10 @@
-import NavDashboard from "../components/Navbar";
+import NavbarAdmin from "../components/NavbarAdmin";
 import Sidebar from "../components/Sidebar";
 
 function HomeDashboard() {
   return (
     <div className="home-dashboard">
-      <NavDashboard />
+      <NavbarAdmin />
       <Sidebar />
     </div>
   );
