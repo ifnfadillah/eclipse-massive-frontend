@@ -2,7 +2,7 @@ import NavbarHome from "../components/NavbarHome";
 import SectionCTA3 from "../section/SectionCta3";
 import FeaturesSharenting from "../section/FeaturesSharenting";
 import Footer from "../components/Footer";
-import BannerKomunitas from "../components/Banner2";
+import BannerKomunitas from "../components/BannerKomunitas";
 
 function Sharenting() {
   return (

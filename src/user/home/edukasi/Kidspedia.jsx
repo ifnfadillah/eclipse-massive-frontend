@@ -2,7 +2,7 @@ import NavbarHome from "../../components/NavbarHome";
 import SectionCTA2 from "../../section/SectionCta2";
 import FeaturesKidspedia from "../../section/FeaturesKidspedia";
 import Footer from "../../components/Footer";
-import Banner from "../../components/Banner";
+import Banner from "../../components/BannerKidspedia";
 
 function Kidspedia() {
   return (
