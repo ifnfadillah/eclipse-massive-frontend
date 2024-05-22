@@ -26,6 +26,7 @@ const Faq = () => {
         <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
           <div className="mx-auto max-w-screen-lg text-center mb-16 lg:mb-24">
             <h2 className="mb-4 text-5xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+
               Masih Ada Pertanyaan Tentang{" "}
               <strong className="text-blue-700">Parentify</strong>?
             </h2>

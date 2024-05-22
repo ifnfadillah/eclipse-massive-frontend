@@ -11,9 +11,11 @@ const Form = () => {
         <form className="space-y-4 md:space-y-6" action="" method="post">
           <Input text="Username" name="username" type="username" placeholder="Masukkan Username" />
           <Input text="Kata Sandi" name="Password" type="Password" placeholder="Masukkan Kata Sandi" />
-          <Link to="/dashboard">
-            <AuthButton>Masuk </AuthButton>
-          </Link>
+          <div className="mt-4">
+            <Link to="/dashboard">
+              <AuthButton>Masuk</AuthButton>
+            </Link>
+          </div>
           <p className="text-sm font-light text-gray-500">
             <span className="text-sm sm:text-center">
               © 2024{" "}
