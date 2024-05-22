@@ -25,10 +25,10 @@ function CardArtikel() {
               maxHeight: "3em",
             }}
           >
-            Pentingnya Keterlibatan Ayah dalam Pengasuhan Anak y Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Fuga id velit earum
-            natus, odit modi autem harum assumenda soluta fugiat vel obcaecati
-            officia neque nisi expedita numquam necessitatibus rem ratione.
+            Pentingnya Keterlibatan Ayah dalam Pengasuhan Anak Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Fuga id velit earum natus,
+            odit modi autem harum assumenda soluta fugiat vel obcaecati officia
+            neque nisi expedita numquam necessitatibus rem ratione.
           </h6>
           <div
             className="self-stretch text-zinc-700 text-sm font-normal font-['Open Sans']"
