@@ -16,7 +16,7 @@ const Form = () => {
               <AuthButton>Masuk</AuthButton>
             </Link>
           </div>
-          <p className="text-sm font-light text-gray-900">
+          <p className="text-sm font-light font-secondary text-gray-900">
             <span className="text-sm sm:text-center">
               © 2024{" "}
               <a href="/" className="hover:underline">
