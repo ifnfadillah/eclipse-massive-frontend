@@ -4,13 +4,13 @@ const InputForm = (props) => {
         <div>
             <label
                 htmlFor={name}
-                className="block mb-2 text-sm font-semibold text-gray-800">
+                className="block mb-2 text-md font-primary font-medium text-gray-800">
                 {text}
             </label>
             <input
                 type={type}
                 name={name}
-                className="bg-gray-50 border border-blue-500 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder:opacity-50"
+                className="bg-gray-50 border border-sky-500 text-gray-900 font-primary text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder:opacity-50"
                 placeholder={placeholder}
                 required />
         </div>

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "@/components/Image";
 
 const NavbarAdmin = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -31,7 +30,7 @@ const NavbarAdmin = () => {
               </svg>
             </button>
             <a href="https://flowbite.com" className="flex ms-2 md:me-24">
-              <Image src="https://flowbite.com/docs/images/logo.svg" className="h-8 me-3" alt="FlowBite Logo" />
+              <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 me-3" alt="FlowBite Logo" />
             </a>
           </div>
         </div>
