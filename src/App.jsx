@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import HomeDashboard from "./admin/dashboard/HomeDashboard";
 import Login from "./admin/login/Login";
-import HomeUser from "./user/home/HomeUser";
-import Kidspedia from "./user/home/edukasi/Kidspedia";
-import Sharenting from "./user/home/Sharenting";
-import PanduanAsuh from "./user/home/PanduanAsuh";
+import HomeUser from "./user/pages/home";
+import Kidspedia from "./user/pages/kidspedia";
+import Sharenting from "./user/pages/sharenting";
+import PanduanAsuh from "./user/pages/panduan";
 
 function App() {
   return (

@@ -20,7 +20,7 @@ const Faq = () => {
             </p>
           </div>
           <div className="flex justify-center">
-            <div className="w-full max-w-5xl">
+            <div className="w-full max-w-7xl">
               <div id="accordion-collapse" data-accordion="collapse">
                 <div className="mb-8">
                   <h3 id="accordion-collapse-heading-1">

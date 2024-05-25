@@ -1,8 +1,8 @@
 import NavbarHome from "../components/NavbarHome";
-import SectionCTA4 from "../section/SectionCTA4";
-import SectionCategory from "../section/SectionCategory";
+import SectionCTA4 from "../layouts/SectionCTA4";
+import SectionCategory from "../layouts/SectionCategory";
 import Footer from "../components/Footer";
-import BannerPanduan from "../components/Banner3";
+import BannerPanduan from "../components/Banner/BannerPanduan";
 
 function PanduanAsuh() {
   return (

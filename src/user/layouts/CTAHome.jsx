@@ -2,9 +2,9 @@
 import JudulCTA from "../components/JudulCTA";
 import JudulFitur from "../components/JudulFitur";
 import DeskripsiCta from "../components/DeskripsiCta";
-import ButtonCta from "../components/ButtonCta";
+import ButtonCta from "../components/CTA/Button/ButtonCTA";
 
-const SectionCTA = () => {
+const CTAHome = () => {
   return (
     <div className="section">
       <section className="bg-slate-50 dark:bg-gray-900">
@@ -26,4 +26,4 @@ const SectionCTA = () => {
   );
 };
 
-export default SectionCTA;
+export default CTAHome;

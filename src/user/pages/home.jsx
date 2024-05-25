@@ -1,16 +1,16 @@
 import NavbarHome from "../components/NavbarHome";
-import SectionCTA from "../section/SectionCTA";
-import FeaturesHome from "../section/FeaturesHome";
-import Testimonial from "../section/Testimonial";
-import VideoShowcase from "../section/VideoShowcase";
-import Faq from "../section/Faq";
+import CTAHome from "../layouts/CTAHome";
+import FeaturesHome from "../layouts/FeaturesHome";
+import Testimonial from "../layouts/Testimonial";
+import VideoShowcase from "../layouts/VideoShowcase";
+import Faq from "../layouts/Faq";
 import Footer from "../components/Footer";
 
 function HomeUser() {
   return (
     <div className="home bg-slate-50">
       <NavbarHome />
-      <SectionCTA />
+      <CTAHome />
       <FeaturesHome />
       <Testimonial />
       <VideoShowcase />

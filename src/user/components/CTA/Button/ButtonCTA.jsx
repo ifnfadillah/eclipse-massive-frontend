@@ -1,4 +1,4 @@
-const ButtonCta = (props) => {
+const ButtonCTA = (props) => {
   const { children } = props;
   return (
     <a
@@ -13,4 +13,4 @@ const ButtonCta = (props) => {
   );
 };
 
-export default ButtonCta;
+export default ButtonCTA;
