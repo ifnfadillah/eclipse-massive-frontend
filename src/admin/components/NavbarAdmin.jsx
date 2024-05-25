@@ -20,10 +20,11 @@ const NavbarAdmin = () => {
                 onClick={toggleSidebar}
                 aria-label={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
                 type="button"
-                className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                className="items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden lg:hidden md:ms-3 md:block inline-flex hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">{isSidebarOpen ? "Close sidebar" : "Open sidebar"}</span>
-                {isSidebarOpen ? <X size={28} strokeWidth={1} /> : <Menu size={28} strokeWidth={1} />}
+                {isSidebarOpen ?
+                  <X size={28} strokeWidth={1} /> : <Menu size={28} strokeWidth={1} />}
               </button>
               <Link to="/" className="flex md:me-24 ms-3">
                 <img src="/assets/parentify-logo.png" className="h-14" alt="Logo" />

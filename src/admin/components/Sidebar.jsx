@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, Handshake, Baby, UsersRound, Newspaper, LogOut, ChevronDown, ChevronUp } from "lucide-react";
 
@@ -20,8 +19,8 @@ function Sidebar() {
   return (
     <div className="Sidebar">
       <aside
-        id="sidebar-multi-level-sidebar relative"
-        className="fixed top-0 left-0 z-40 w-60 h-screen py-12 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        id="sidebar-multi-level-sidebar"
+        className="fixed top-0 left-0 z-40 w-60 h-screen py-12 bg-white border-r border-gray-200 transition-transform transform -translate-x-full sm:-translate-x-full md:-translate-x-full lg:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
         aria-label="Sidebar"
       >
         <div className="h-full px-6 py-8 overflow-y-auto bg-white dark:bg-gray-800">
@@ -91,7 +90,7 @@ function Sidebar() {
           <div className="absolute bottom-5 w-48">
             <Link to="/login" className="flex items-center p-2 px-3 bg-red-700 text-white rounded-lg dark:text-white hover:bg-red-800 dark:hover:bg-gray-700 group">
               <LogOut className="text-white transition duration-75 dark:text-gray-400 group-hover:text-white-900 dark:group-hover:text-white" size={24} strokeWidth={2} />
-              <span className="ms-24 font-secondary font-semibold text-sm ">Keluar</span>
+              <span className="ms-24 font-secondary font-semibold text-sm">Keluar</span>
             </Link>
           </div>
         </div>
