@@ -15,23 +15,23 @@ import DataArtikel from "./admin/artikel/DataArtikel";
 
 
 function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<HomeUser />}>
-        <Route index path="/" element={<HomeUser />} />
-        <Route path="/kidspedia" element={<Kidspedia />} />
-        <Route path="/sharenting" element={<Sharenting />} />
-        <Route path="/edukasi/panduanasuh" element={<PanduanAsuh />} />
-      </Route>
-      <Route path="*" element={<NotFound />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/dashboard" element={<HomeDashboard />} />
-      <Route path="/data-mitra" element={<DataMitra />} />
-      <Route path="/data-kidspedia" element={<DataKidspedia />} />
-      <Route path="/data-webinar" element={<DataWebinar />} />
-      <Route path="/data-komunitas" element={<DataKomunitas />} />
-      <Route path="/data-artikel" element={<DataArtikel />} />
-    </Routes>
+  return (<Routes>
+    <Route path="/" element={<HomeUser />}>
+      <Route index path="/" element={<HomeUser />} />
+      <Route path="/kidspedia" element={<Kidspedia />} />
+      <Route path="/sharenting" element={<Sharenting />} />
+      <Route path="/edukasi/panduanasuh" element={<PanduanAsuh />} />
+    </Route>
+    <Route path="/login" element={<Login />} />
+    <Route path="/dashboard" element={<HomeDashboard />} />
+    <Route path="/data-mitra" element={<DataMitra />} />
+    <Route path="/data-kidspedia" element={<DataKidspedia />} />
+    <Route path="/data-webinar" element={<DataWebinar />} />
+    <Route path="/data-komunitas" element={<DataKomunitas />} />
+    <Route path="/data-artikel" element={<DataArtikel />} />
+    <Route path="*" element={<NotFound />} />
+  </Routes>
+
   );
 }
 

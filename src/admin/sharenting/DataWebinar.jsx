@@ -2,8 +2,20 @@ import React from 'react'
 import Layout from '../layout'
 import SearchForm from '../components/SearchForm'
 import Button from '../components/Button'
+import Table from '../components/Table'
 
 function DataWebinar() {
+
+    const headers = [
+        { label: "No", className: "lg:px-8 lg:py-6 px-6 py-3" },
+        { label: "Judul Webinar", className: "lg:px-12 lg:py-6 px-6 py-3" },
+        { label: "Tanggal", className: "lg:px-12 lg:py-6 px-6 py-3" },
+        { label: "Harga", className: "lg:px-12 lg:py-6 px-6 py-3" },
+    ];
+
+    const data = [
+    ];
+
     return (
         <Layout>
             <div className="flex flex-col md:flex-row md:items-center justify-between">
@@ -26,6 +38,7 @@ function DataWebinar() {
                     </Button>
                 </div>
             </div>
+            <Table headers={headers} data={data} />
         </Layout>
     )
 }

@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
         <>
             <NavbarAdmin />
             <Sidebar />
-            <div className="w-full pt-24 px-4 sm:px-6 md:px-10 lg:ps-72 flex flex-col space-y-7">
+            <div className="w-full pt-20 lg:pt-24 px-4 sm:px-6 md:px-10 lg:ps-72 flex flex-col space-y-7">
                 {children}
             </div>
         </>

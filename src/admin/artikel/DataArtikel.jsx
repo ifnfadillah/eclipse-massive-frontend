@@ -2,8 +2,20 @@ import React from 'react'
 import Layout from '../layout'
 import SearchForm from '../components/SearchForm'
 import Button from '../components/Button'
+import Table from '../components/Table'
 
 function DataArtikel() {
+
+    const headers = [
+        { label: "No", className: "lg:px-8 lg:py-6 px-6 py-3" },
+        { label: "Nama Komunitas", className: "lg:px-12 lg:py-6 px-6 py-3" },
+        { label: "Foto", className: "lg:px-12 lg:py-6 px-6 py-3" },
+    ];
+
+    const data = [
+    ];
+
+
     return (
         <Layout>
             <div className="flex flex-col md:flex-row md:items-center justify-between">
@@ -26,6 +38,7 @@ function DataArtikel() {
                     </Button>
                 </div>
             </div>
+            <Table headers={headers} data={data} />
         </Layout>
     )
 }
