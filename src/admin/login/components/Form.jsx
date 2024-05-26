@@ -1,5 +1,5 @@
 import Input from "./Input";
-import AuthButton from "./AuthButton";
+import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 
 const Form = () => {
@@ -13,10 +13,15 @@ const Form = () => {
           <Input text="Kata Sandi" name="Password" type="Password" placeholder="Masukkan Kata Sandi" />
           <div className="mt-4">
             <Link to="/dashboard">
-              <AuthButton>Masuk</AuthButton>
+              <Button
+                classname="w-full text-white bg-sky-500 hover:bg-sky-700 font-primary focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-md text-sm px-5 py-3 text-center"
+                type="submit"
+                name="login">
+                Masuk
+              </Button>
             </Link>
           </div>
-          <p className="text-sm font-light text-gray-900">
+          <p className="text-sm font-light font-secondary text-gray-900">
             <span className="text-sm sm:text-center">
               © 2024{" "}
               <a href="/" className="hover:underline">
