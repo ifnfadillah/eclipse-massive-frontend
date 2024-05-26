@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, Handshake, Baby, UsersRound, Newspaper, LogOut, ChevronDown, ChevronUp } from "lucide-react";
 
-function Sidebar() {
+function Sidebar({ isSidebarOpen, toggleSidebar }) {
   const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
   const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
   const location = useLocation();
@@ -20,7 +20,7 @@ function Sidebar() {
     <div className="Sidebar">
       <aside
         id="sidebar-multi-level-sidebar"
-        className="fixed top-0 left-0 z-40 w-60 h-screen py-12 bg-white border-r border-gray-200 transition-transform transform -translate-x-full sm:-translate-x-full md:-translate-x-full lg:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        className={`fixed top-0 left-0 z-40 w-60 h-screen py-12 bg-white border-r border-gray-200 transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}
         aria-label="Sidebar"
       >
         <div className="h-full px-6 py-8 overflow-y-auto bg-white dark:bg-gray-800">

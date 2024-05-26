@@ -1,8 +1,32 @@
 import React, { useState } from 'react';
 import Button from "./Button";
+import PopupDelete from './pop-up/PopupDelete';
 import Pagination from "./Pagination";
 
-const Table = ({ headers, data }) => {
+const Table = ({ headers, data, setData }) => {
+    // Pop Up Dialog Hapus
+    const [isOpen, setIsOpen] = useState(false);
+    const [itemToDelete, setItemToDelete] = useState(null);
+
+    const handleDelete = (index) => {
+        setItemToDelete(index);
+        setIsOpen(true);
+    };
+
+    const handleConfirm = () => {
+        setIsOpen(false);
+        if (itemToDelete !== null) {
+            const newData = data.filter((_, index) => index !== itemToDelete);
+            setData(newData);
+            console.log('Item dihapus', newData);
+        }
+    };
+
+    const handleCancel = () => {
+        setIsOpen(false);
+    };
+
+    // Pagination
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 5;
     const totalPages = Math.ceil(data.length / itemsPerPage);
@@ -49,7 +73,7 @@ const Table = ({ headers, data }) => {
                                         {row.map((cell, cellIndex) => (
                                             <td
                                                 key={cellIndex}
-                                                className={`font-secondary text-xs font-medium text-gray-800 px-12 py-4 max-w-xs truncate ${headers[cellIndex].className}`}
+                                                className={`font-primary text-xs font-regular text-gray-800 px-12 py-4 max-w-xs truncate ${headers[cellIndex].className}`}
                                             >
                                                 {cell}
                                             </td>
@@ -62,6 +86,7 @@ const Table = ({ headers, data }) => {
                                                 Ubah
                                             </Button>
                                             <Button
+                                                onClick={() => handleDelete(index)}
                                                 classname="h-9 w-20 font-secondary text-xs rounded-3xl font-medium bg-red-500 hover:bg-red-700 text-white"
                                                 type="button"
                                             >
@@ -83,6 +108,12 @@ const Table = ({ headers, data }) => {
                         onPageChange={handlePageChange}
                     />
                 </div>
+            )}
+            {isOpen && (
+                <PopupDelete
+                    onConfirm={handleConfirm}
+                    onCancel={handleCancel}
+                />
             )}
         </>
     );

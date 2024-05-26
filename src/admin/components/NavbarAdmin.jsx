@@ -33,7 +33,7 @@ const NavbarAdmin = () => {
           </div>
         </div>
       </nav>
-      {isSidebarOpen && <Sidebar />}
+      <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     </div>
   );
 };
