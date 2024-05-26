@@ -20,8 +20,7 @@ function Sidebar({ isSidebarOpen, toggleSidebar }) {
     <div className="Sidebar">
       <aside
         id="sidebar-multi-level-sidebar"
-
-        className={`fixed top-0 left-0 z-40 w-60 h-screen py-12 bg-white border-r border-gray-200 transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}
+        className={`fixed top-0 left-0 z-40 w-60 h-screen py-12 bg-white border-r border-gray-200 transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 xl:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}
       >
         <div className="h-full px-6 py-8 overflow-y-auto bg-white dark:bg-gray-800">
           <ul className="space-y-4 font-medium">
