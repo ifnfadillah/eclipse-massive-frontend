@@ -1,4 +1,4 @@
-import NavbarHome from "../components/NavbarHome";
+import NavbarHome from "../components/Navbar/NavbarHome";
 import SectionCTA2 from "../layouts/SectionCta2";
 import FeaturesKidspedia from "../layouts/FeaturesKidspedia";
 import Footer from "../components/Footer";

@@ -1,4 +1,4 @@
-import NavbarHome from "../components/NavbarHome";
+import NavbarHome from "../components/Navbar/NavbarHome";
 import SectionCTA4 from "../layouts/SectionCTA4";
 import SectionCategory from "../layouts/SectionCategory";
 import Footer from "../components/Footer";

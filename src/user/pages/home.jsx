@@ -1,4 +1,4 @@
-import NavbarHome from "../components/NavbarHome";
+import NavbarHome from "../components/Navbar/NavbarHome";
 import CTAHome from "../layouts/CTAHome";
 import FeaturesHome from "../layouts/FeaturesHome";
 import Testimonial from "../layouts/Testimonial";

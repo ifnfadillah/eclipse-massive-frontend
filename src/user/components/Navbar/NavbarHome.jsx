@@ -33,10 +33,10 @@ const NavbarHome = () => {
   const isEdukasiActive = location.pathname.startsWith("/edukasi");
 
   return (
-    <nav className="bg-gradient-to-t from-sky-200  to-sky-400 sticky top-4 mx-10 border-blue-200 dark:border-gray-600 dark:bg-gray-900 rounded-3xl shadow-lg z-50">
+    <nav className="bg-gradient-to-t from-sky-200 to-sky-400 sticky top-4 mx-10 border-blue-200 dark:border-gray-600 dark:bg-gray-900 rounded-3xl shadow-lg z-50">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="#home" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="/assets/logoHome.png" className="h-12" alt="Flowbite Logo" />
+          <img src="/assets/logoHome.png" className="h-12" alt="parentify-logo" />
           <span className="self-center text-2xl text-sky-700 font-semibold whitespace-nowrap dark:textWhite">Parentify</span>
         </a>
         <button
@@ -57,7 +57,7 @@ const NavbarHome = () => {
               <Link
                 to="/"
                 className={`block py-2 px-3 text-sky-700 border-b border-gray-100 hover:text-zinc-700 md:hover:bg-transparent md:border-0 md:hover:text-zinc-700 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
-                  isActiveLink("/") ? "underline decoration-4 underline-offset-4 decoration-sky-950 text-sky-950" : ""
+                  isActiveLink("/") ? "underline underline-offset-8 decoration-4 decoration-sky-950 text-sky-950" : ""
                 }`}
                 aria-current="page"
               >
@@ -70,7 +70,7 @@ const NavbarHome = () => {
                 onClick={toggleDropdown}
                 data-collapse-toggle="mega-menu-full-dropdown"
                 className={`flex items-center justify-between w-full py-2 px-3 font-medium text-sky-700 border-b border-gray-100 md:w-auto hover:text-zinc-700 md:hover:bg-transparent md:border-0 md:hover:text-zinc-700 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
-                  isEdukasiActive ? "underline decoration-4 underline-offset-4 decoration-sky-950 text-sky-950" : ""
+                  isEdukasiActive ? "underline underline-offset-8 decoration-4 decoration-sky-950 text-sky-950" : ""
                 }`}
               >
                 Edukasi{" "}
@@ -83,7 +83,7 @@ const NavbarHome = () => {
               <Link
                 to="/kidspedia"
                 className={`block py-2 px-3 text-sky-700 border-b border-gray-100 hover:text-zinc-700 md:hover:bg-transparent md:border-0 md:hover:text-zinc-700 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
-                  isActiveLink("/kidspedia") ? "underline decoration-4 underline-offset-4 decoration-sky-950 text-sky-950" : ""
+                  isActiveLink("/kidspedia") ? "underline underline-offset-8 decoration-4 decoration-sky-950 text-sky-950" : ""
                 }`}
               >
                 Kidspedia
@@ -91,21 +91,21 @@ const NavbarHome = () => {
             </li>
             <li>
               <Link
-                to="/Sharenting"
+                to="/sharenting"
                 className={`block py-2 px-3 text-sky-700 border-b border-gray-100 hover:text-zinc-700 md:hover:bg-transparent md:border-0 md:hover:text-zinc-700 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
-                  isActiveLink("/Sharenting") ? "underline decoration-4 underline-offset-4 underline-mb-4 decoration-sky-950 text-sky-950" : ""
+                  isActiveLink("/sharenting") ? "underline underline-offset-8 underline-mb-4 decoration-4 decoration-sky-950 text-sky-950" : ""
                 }`}
               >
                 Sharenting
               </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#"
                 className="block py-2 px-3 text-sky-700 border-b border-gray-100 hover:text-zinc-700 md:hover:bg-transparent md:border-0 md:hover:text-zinc-700 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Artikel
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -124,20 +124,24 @@ const NavbarHome = () => {
               </Link>
             </ul>
             <ul>
-              <li>
-                <a href="#" className="block p-3 rounded-lg hover:text-zinc-700 dark:hover:bg-gray-700">
-                  <div className="font-semibold">Gaya Parenting</div>
-                  <span className="text-sm text-sky-700 dark:text-gray-400">Gaya parenting dan perilakunya kepada anak</span>
-                </a>
-              </li>
+              <Link to="/edukasi/gayaparenting">
+                <li>
+                  <a href="#" className="block p-3 rounded-lg hover:text-zinc-700 dark:hover:bg-gray-700">
+                    <div className="font-semibold">Gaya Parenting</div>
+                    <span className="text-sm text-sky-700 dark:text-gray-400">Gaya parenting dan perilakunya kepada anak</span>
+                  </a>
+                </li>
+              </Link>
             </ul>
-            <ul className="hidden md:block">
-              <li>
-                <a href="#" className="block p-3 rounded-lg hover:text-zinc-700 dark:hover:bg-gray-700">
-                  <div className="font-semibold">Kenali Gaya Parentingmu</div>
-                  <span className="text-sm text-sky-700 dark:text-gray-400">Quiz mengenali gaya parenting orang tua</span>
-                </a>
-              </li>
+            <ul>
+              <Link to="/edukasi/kenaligaya">
+                <li>
+                  <a href="#" className="block p-3 rounded-lg hover:text-zinc-700 dark:hover:bg-gray-700">
+                    <div className="font-semibold">Kenali Gaya Parentingmu</div>
+                    <span className="text-sm text-sky-700 dark:text-gray-400">Quiz mengenali gaya parenting orang tua</span>
+                  </a>
+                </li>
+              </Link>
             </ul>
           </div>
         </div>

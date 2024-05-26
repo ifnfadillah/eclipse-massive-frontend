@@ -4,7 +4,7 @@ import Login from "./admin/login/Login";
 import HomeUser from "./user/pages/home";
 import Kidspedia from "./user/pages/kidspedia";
 import Sharenting from "./user/pages/sharenting";
-import PanduanAsuh from "./user/pages/panduan";
+import PanduanAsuh from "./user/pages/panduanasuh";
 
 function App() {
   return (
