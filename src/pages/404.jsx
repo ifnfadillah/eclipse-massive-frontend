@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
-    return (
-
-        <div className="flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900">
+  return (
+    <div className="flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900">
             <div className="block md:max-w-lg mb-4">
                 <img src="assets/404.png" alt="astronaut image" />
             </div>
@@ -16,7 +15,6 @@ const NotFound = () => {
                 </Link>
             </div>
         </div >
-    )
-}
-
+  );
+};
 export default NotFound;
