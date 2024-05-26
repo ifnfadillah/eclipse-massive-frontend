@@ -1,7 +1,11 @@
+import React from 'react';
+import Button from './Button';
+
 const Input = (props) => {
     const { type, name, placeholder, text } = props;
+
     return (
-        <div>
+        <div className="col-span-2 md:col-span-6">
             <label
                 htmlFor={name}
                 className="block mb-2 text-md font-primary font-medium text-gray-800">
@@ -10,9 +14,11 @@ const Input = (props) => {
             <input
                 type={type}
                 name={name}
-                className="bg-gray-50 border border-sky-500 text-gray-900 font-secondary text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder:opacity-50"
+                className="bg-white border border-gray-700 text-gray-900 text-sm font-primary font-regular rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 px-4 placeholder:text-xs"
                 placeholder={placeholder}
-                required />
+                id={name}
+                required
+            />
         </div>
     );
 };

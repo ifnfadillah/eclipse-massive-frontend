@@ -3,6 +3,7 @@ import Layout from '../layout'
 import SearchForm from '../components/SearchForm'
 import Button from '../components/Button'
 import Table from '../components/Table'
+import { Link } from 'react-router-dom'
 
 function DataWebinar() {
 
@@ -34,7 +35,7 @@ function DataWebinar() {
                         classname="h-10 px-6 font-secondary text-sm rounded-md font-medium bg-sky-500 hover:bg-sky-700 text-white"
                         type="add"
                         name="tambah">
-                        Tambah
+                        <Link to="/data-webinar-tambah">Tambah</Link>
                     </Button>
                 </div>
             </div>

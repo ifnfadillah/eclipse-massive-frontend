@@ -3,13 +3,14 @@ import Layout from '../layout'
 import SearchForm from '../components/SearchForm'
 import Button from '../components/Button'
 import Table from '../components/Table'
+import { Link } from 'react-router-dom'
 
 function DataArtikel() {
 
     const headers = [
         { label: "No", className: "lg:px-8 lg:py-6 px-6 py-3" },
-        { label: "Nama Komunitas", className: "lg:px-12 lg:py-6 px-6 py-3" },
-        { label: "Foto", className: "lg:px-12 lg:py-6 px-6 py-3" },
+        { label: "Judul", className: "lg:px-12 lg:py-6 px-6 py-3" },
+        { label: "Tanggal", className: "lg:px-12 lg:py-6 px-6 py-3" },
     ];
 
     const data = [
@@ -34,7 +35,7 @@ function DataArtikel() {
                         classname="h-10 px-6 font-secondary text-sm rounded-md font-medium bg-sky-500 hover:bg-sky-700 text-white"
                         type="add"
                         name="tambah">
-                        Tambah
+                        <Link to="/data-artikel-tambah">Tambah</Link>
                     </Button>
                 </div>
             </div>
