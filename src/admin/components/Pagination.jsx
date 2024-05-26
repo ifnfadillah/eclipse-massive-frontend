@@ -31,10 +31,14 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
                 <li>
                     <a href='#'
                         onClick={handlePreviousPage}
-                        className={`flex items-center justify-center font-primary font-regular px-3 h-10 ms-0 leading-tight text-sky-700 bg-white border border-e-0 border-sky-700 rounded-s-lg ${currentPage === 1 ? 'pointer-events-none text-white bg-gray-400 border-gray-500' : 'hover:bg-sky-900 hover:text-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'}`}
+                        className={`flex items-center justify-center font-primary font-regular px-3 h-10 ms-0 leading-tight ${currentPage === 1
+                            ? 'pointer-events-none text-white rounded-s-lg border border-e-0 bg-gray-400  border-gray-400'
+                            : 'text-sky-700 bg-white border border-e-0 border-sky-700 rounded-s-lg hover:bg-sky-900 hover:text-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
+                            }`}
                     >
                         Sebelumnya
                     </a>
+
                 </li>
                 {pageNumbers.map((number) => (
                     <li key={number}>
@@ -49,7 +53,10 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
                 <li>
                     <a href='#'
                         onClick={handleNextPage}
-                        className={`flex items-center justify-center font-primary font-regular px-3 h-10 leading-tight text-sky-700 bg-white border border-sky-700 rounded-e-lg ${currentPage === totalPages ? 'pointer-events-none text-white bg-gray-400 border-gray-500' : 'hover:bg-sky-900 hover:text-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'}`}
+                        className={`flex items-center justify-center font-primary font-regular px-3 h-10 ms-0 leading-tight ${currentPage === totalPages
+                            ? 'pointer-events-none text-white rounded-e-lg border  bg-gray-400  border-gray-400'
+                            : 'text-sky-700 bg-white border  border-sky-700 rounded-e-lg hover:bg-sky-900 hover:text-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
+                            }`}
                     >
                         Selanjutnya
                     </a>
