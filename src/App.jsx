@@ -13,11 +13,13 @@ import "./index.css";
 function App() {
   return (
     <Routes>
-      <Route index path="/" element={<HomeUser />} />
-      <Route path="/kidspedia" element={<Kidspedia />} />
-      <Route path="/sharenting" element={<Sharenting />} />
-      <Route path="/edukasi/panduanasuh" element={<PanduanAsuh />} />
-      <Route path="/article" element={<ListArticle />} />
+      <Route path="/" element={<HomeUser />}>
+        <Route index path="/" element={<HomeUser />} />
+        <Route path="/kidspedia" element={<Kidspedia />} />
+        <Route path="/sharenting" element={<Sharenting />} />
+        <Route path="/edukasi/panduanasuh" element={<PanduanAsuh />} />
+        <Route path="/article" element={<ListArticle />} />
+      </Route>
       <Route path="*" element={<NotFound />} />
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<Layout />}>
