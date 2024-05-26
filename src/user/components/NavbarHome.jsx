@@ -30,10 +30,7 @@ const NavbarHome = () => {
   return (
     <nav className="bg-gradient-to-t from-sky-200 via-sky-300 to-sky-400 sticky top-4 mx-10 border-blue-200 dark:border-gray-600 dark:bg-gray-900 rounded-3xl shadow-lg z-50">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-        <a
-          href="#home"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
-        >
+        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
             src="/assets/logoHome.png"
             className="h-12"
@@ -118,7 +115,7 @@ const NavbarHome = () => {
             </li>
             <li>
               <Link
-                to="/Sharenting"
+                to="/sharenting"
                 className="block py-2 px-3 text-white border-b border-gray-100 hover:text-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-300 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Sharenting
