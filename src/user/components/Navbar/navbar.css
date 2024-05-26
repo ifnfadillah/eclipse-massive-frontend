@@ -1,0 +1,13 @@
+/* .custom-underline {
+  position: relative;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  bottom: -4px; 
+  left: 0;
+} */
