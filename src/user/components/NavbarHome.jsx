@@ -28,17 +28,14 @@ const NavbarHome = () => {
   }, [isDropdownOpen]);
 
   return (
-    <nav className="bg-gradient-to-t from-sky-200 via-sky-300 to-sky-400 sticky top-4 mx-10 border-blue-200 dark:border-gray-600 dark:bg-gray-900 rounded-3xl shadow-lg z-50">
-      <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+    <nav className="bg-gradient-to-t from-sky-200 to-sky-400 sticky top-4 mx-10 border-blue-200 dark:border-gray-600 dark:bg-gray-900 rounded-3xl shadow-lg z-50">
+      <div className="container flex flex-wrap justify-between items-center max-w-screen-xl p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
-            src="/assets/logoHome.png"
+            src="/assets/logoNavbar.png"
             className="h-12"
             alt="Flowbite Logo"
           />
-          <span className="self-center text-2xl text-white font-semibold whitespace-nowrap dark:textWhite">
-            Parentify
-          </span>
         </a>
         <button
           onClick={toggleDropdown}

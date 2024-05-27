@@ -1,12 +1,14 @@
 import NavbarHome from "../components/NavbarHome";
 import Footer from "../components/Footer";
-import ListAarticle from "../section/SectionCTAarticle";
+import CTAAarticle from "../section/SectionCTAarticle";
+import ArtikelList from "../section/SectionLIstArtikel";
 
 function listArticle() {
   return (
     <>
       <NavbarHome />
-      <ListAarticle />
+      <CTAAarticle />
+      <ArtikelList />
       <Footer />
     </>
   );
