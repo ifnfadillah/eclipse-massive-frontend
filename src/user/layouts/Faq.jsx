@@ -36,7 +36,7 @@ const Faq = () => {
             </p>
           </div>
           <div className="flex justify-center">
-            <div className="w-full max-w-5xl">
+            <div className="w-full max-w-7xl">
               <div id="accordion-collapse" data-accordion="collapse">
                 {[
                   {

@@ -2,7 +2,7 @@
 import JudulCTA from "../components/JudulCTA";
 import JudulFitur from "../components/JudulFitur";
 import DeskripsiCta from "../components/DeskripsiCta";
-import ButtonCta from "../components/ButtonCta";
+import ButtonCta from "../components/CTA/Button/ButtonCTA";
 
 const SectionCTA2 = () => {
   return (

@@ -1,10 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import HomeDashboard from "./admin/dashboard/HomeDashboard";
 import Login from "./admin/login/Login";
-import HomeUser from "./user/home/HomeUser";
-import Kidspedia from "./user/home/edukasi/Kidspedia";
-import Sharenting from "./user/home/Sharenting";
-import PanduanAsuh from "./user/home/PanduanAsuh";
+
 import ListArticle from "./user/home/listArtikel";
 import NotFound from "./pages/404";
 import "./index.css";

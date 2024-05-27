@@ -1,8 +1,8 @@
-import NavbarHome from "../components/NavbarHome";
-import SectionCTA3 from "../section/SectionCta3";
-import FeaturesSharenting from "../section/FeaturesSharenting";
+import NavbarHome from "../components/Navbar/NavbarHome";
+import SectionCTA3 from "../layouts/SectionCta3";
+import FeaturesSharenting from "../layouts/FeaturesSharenting";
 import Footer from "../components/Footer";
-import BannerKomunitas from "../components/BannerKomunitas";
+import BannerKomunitas from "../components/Banner/BannerKomunitas";
 
 function Sharenting() {
   return (
