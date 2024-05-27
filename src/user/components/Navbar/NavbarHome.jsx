@@ -35,21 +35,9 @@ const NavbarHome = () => {
   return (
     <nav className="bg-gradient-to-t from-sky-200 to-sky-400 sticky top-4 mx-10 border-blue-200 dark:border-gray-600 dark:bg-gray-900 rounded-3xl shadow-lg z-50">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-
-        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img
-            src="/assets/logoHome.png"
-            className="h-12"
-            alt="Flowbite Logo"
-          />
-          <span className="self-center text-2xl text-white font-semibold whitespace-nowrap dark:textWhite">
-            Parentify
-          </span>
-
         <a href="#home" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="/assets/logoHome.png" className="h-12" alt="parentify-logo" />
           <span className="self-center text-2xl text-sky-700 font-semibold whitespace-nowrap dark:textWhite">Parentify</span>
-
         </a>
         <button
           onClick={toggleDropdown}
@@ -59,28 +47,11 @@ const NavbarHome = () => {
           aria-expanded={isDropdownOpen}
         >
           <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
+          <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
           </svg>
         </button>
-        <div
-          id="mega-menu-full"
-          className={`items-center justify-between ${
-            isDropdownOpen ? "block" : "hidden"
-          } w-full md:flex md:w-auto md:order-1`}
-        >
+        <div id="mega-menu-full" className={`items-center justify-between ${isDropdownOpen ? "block" : "hidden"} w-full md:flex md:w-auto md:order-1`}>
           <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
             <li>
               <Link
@@ -103,20 +74,8 @@ const NavbarHome = () => {
                 }`}
               >
                 Edukasi{" "}
-                <svg
-                  className="w-2.5 h-2.5 ms-3"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 1 4 4 4-4"
-                  />
+                <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                 </svg>
               </button>
             </li>
@@ -133,11 +92,10 @@ const NavbarHome = () => {
             <li>
               <Link
                 to="/sharenting"
-                className="block py-2 px-3 text-white border-b border-gray-100 hover:text-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-300 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-
                 className={`block py-2 px-3 text-sky-700 border-b border-gray-100 hover:text-zinc-700 md:hover:bg-transparent md:border-0 md:hover:text-zinc-700 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
                   isActiveLink("/sharenting") ? "underline underline-offset-8 underline-mb-4 decoration-4 decoration-sky-950 text-sky-950" : ""
-                }`}>
+                }`}
+              >
                 Sharenting
               </Link>
             </li>
@@ -153,23 +111,6 @@ const NavbarHome = () => {
         </div>
       </div>
       {isDropdownOpen && (
-        <div
-          id="mega-menu-full-dropdown"
-          className="mt-1 bg-sky-300 border-gray-200 shadow-sm border-y rounded-b-3xl dark:bg-gray-900 dark:border-gray-600"
-        >
-          <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-white dark:textWhite sm:grid-cols-2 md:grid-cols-3 md:px-6">
-            <ul aria-labelledby="mega-menu-full-dropdown-button">
-              <Link to="/edukasi/panduanasuh">
-                <li>
-                  <a
-                    href="#"
-                    className="block p-3 rounded-lg hover:text-gray-50 dark:hover:bg-gray-700"
-                  >
-                    <div className="font-semibold">Panduan Pola Asuh Anak</div>
-                    <span className="text-sm text-white dark:text-gray-400">
-                      Panduan pola asuh sesuai rentang usia anak.
-                    </span>
-
         <div id="mega-menu-full-dropdown" className="mt-1 bg-sky-300 border-gray-200 shadow-sm border-y rounded-b-3xl dark:bg-gray-900 dark:border-gray-600">
           <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-sky-700 dark:textWhite sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button">
@@ -178,35 +119,23 @@ const NavbarHome = () => {
                   <a href="#" className="block p-3 rounded-lg hover:text-zinc-700 dark:hover:bg-gray-700">
                     <div className="font-semibold">Panduan Pola Asuh Anak</div>
                     <span className="text-sm text-sky-700 dark:text-gray-400">Panduan pola asuh sesuai rentang usia anak.</span>
-
                   </a>
                 </li>
               </Link>
             </ul>
             <ul>
-
               <li>
-                <a
-                  href="#"
-                  className="block p-3 rounded-lg hover:text-gray-50 dark:hover:bg-gray-700"
-                >
+                <a href="#" className="block p-3 rounded-lg hover:text-gray-50 dark:hover:bg-gray-700">
                   <div className="font-semibold">Gaya Parenting</div>
-                  <span className="text-sm text-white dark:text-gray-400">
-                    Gaya parenting dan perilakunya kepada anak
-                  </span>
+                  <span className="text-sm text-white dark:text-gray-400">Gaya parenting dan perilakunya kepada anak</span>
                 </a>
               </li>
             </ul>
             <ul className="hidden md:block">
               <li>
-                <a
-                  href="#"
-                  className="block p-3 rounded-lg hover:text-gray-50 dark:hover:bg-gray-700"
-                >
+                <a href="#" className="block p-3 rounded-lg hover:text-gray-50 dark:hover:bg-gray-700">
                   <div className="font-semibold">Kenali Gaya Parentingmu</div>
-                  <span className="text-sm text-white dark:text-gray-400">
-                    Quiz mengenali gaya parenting orang tua
-                  </span>
+                  <span className="text-sm text-white dark:text-gray-400">Quiz mengenali gaya parenting orang tua</span>
                 </a>
               </li>
 
@@ -228,7 +157,6 @@ const NavbarHome = () => {
                   </a>
                 </li>
               </Link>
-
             </ul>
           </div>
         </div>
