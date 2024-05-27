@@ -17,14 +17,14 @@ const ListArticle = () => {
             </DeskripsiCta>
             <ButtonCta>Lihat Panduan Pola Asuh</ButtonCta>
           </div>
-          <div className="flex justify-center md:mt-0">
+          <div className="flex justify-end md:mt-0">
             <img
-              className="w-3/5 h-auto dark:hidden"
+              className="w-[415px] h-auto dark:hidden"
               src="/assets/ArticleSection.png"
               alt="section-Article"
             />
             <img
-              className="w-3/5 h-auto hidden dark:block"
+              className="w-[415px] h-auto hidden dark:block"
               src="/assets/ArticleSection.png"
               alt="section-Article"
             />

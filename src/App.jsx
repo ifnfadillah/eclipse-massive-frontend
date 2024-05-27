@@ -16,11 +16,6 @@ import TambahKomunitas from "./admin/sharenting/TambahKomunitas";
 import DataArtikel from "./admin/artikel/DataArtikel";
 import TambahArtikel from "./admin/artikel/TambahArtikel";
 
-import HomeUser from "./user/pages/home";
-import Kidspedia from "./user/pages/kidspedia";
-import Sharenting from "./user/pages/sharenting";
-import PanduanAsuh from "./user/pages/panduanasuh";
-
 function App() {
   return (
     <Routes>
