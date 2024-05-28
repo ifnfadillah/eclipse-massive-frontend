@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import HomeDashboard from "./admin/dashboard/HomeDashboard";
 import Login from "./admin/login/Login";
 
-import ListArticle from "./user/home/listArtikel";
 import NotFound from "./pages/404";
 import "./index.css";
 import DataMitra from "./admin/mitra/DataMitra";
