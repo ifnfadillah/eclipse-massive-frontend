@@ -1,7 +1,7 @@
-import NavbarHome from "../components/NavbarHome";
+import NavbarHome from "../components/Navbar/NavbarHome";
 import Footer from "../components/Footer";
-import CTAarticle from "../section/SectionCTAarticle";
-import ArtikelList from "../section/SectionLIstArtikel";
+import ArtikelList from "../layouts/SectionLIstArtikel";
+import CTAarticle from "../layouts/SectionCTAarticle";
 
 function listArticle() {
   return (
