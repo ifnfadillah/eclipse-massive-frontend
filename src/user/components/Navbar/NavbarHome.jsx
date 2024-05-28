@@ -33,16 +33,16 @@ const NavbarHome = () => {
   const isEdukasiActive = location.pathname.startsWith("/edukasi");
 
   return (
-    <nav className="bg-gradient-to-t from-sky-200 to-sky-400 sticky top-4 mx-10 border-blue-200 dark:border-gray-600 dark:bg-gray-900 rounded-3xl shadow-lg z-50">
-      <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-        <a href="#home" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="/assets/logoHome.png" className="h-12" alt="parentify-logo" />
-          <span className="self-center text-2xl text-sky-700 font-semibold whitespace-nowrap dark:textWhite">Parentify</span>
-        </a>
+    <nav className="bg-gradient-to-t from-sky-900 to-sky-600 sticky top-4 md:mx-24 mx-8 border-blue-200 dark:border-gray-600 dark:bg-gray-900 rounded-3xl shadow-lg z-50">
+      <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl py-5 px-12">
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="/assets/icon.png" className="h-12" alt="parentify-logo" />
+          <span className="self-center text-2xl text-gray-50 font-semibold whitespace-nowrap dark:textWhite">Parentify</span>
+        </Link>
         <button
           onClick={toggleDropdown}
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-transparent focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-controls="mega-menu-full"
           aria-expanded={isDropdownOpen}
         >
@@ -52,12 +52,12 @@ const NavbarHome = () => {
           </svg>
         </button>
         <div id="mega-menu-full" className={`items-center justify-between ${isDropdownOpen ? "block" : "hidden"} w-full md:flex md:w-auto md:order-1`}>
-          <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
+          <ul className="flex flex-col mt-4 text-xl font-medium md:flex-row md:mt-0 md:space-x-16 rtl:space-x-reverse">
             <li>
               <Link
                 to="/"
-                className={`block py-2 px-3 text-sky-700 border-b border-gray-100 hover:text-zinc-700 md:hover:bg-transparent md:border-0 md:hover:text-zinc-700 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
-                  isActiveLink("/") ? "underline underline-offset-8 decoration-4 decoration-sky-950 text-sky-950" : ""
+                className={`block py-2 px-3 border-b border-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
+                  isActiveLink("/") ? "text-gray-50 underline underline-offset-8 underline-mb-4 decoration-4 decoration-white" : "text-sky-200 hover:text-sky-300"
                 }`}
                 aria-current="page"
               >
@@ -69,8 +69,8 @@ const NavbarHome = () => {
                 id="mega-menu-full-dropdown-button"
                 onClick={toggleDropdown}
                 data-collapse-toggle="mega-menu-full-dropdown"
-                className={`flex items-center justify-between w-full py-2 px-3 font-medium text-sky-700 border-b border-gray-100 md:w-auto hover:text-zinc-700 md:hover:bg-transparent md:border-0 md:hover:text-zinc-700 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
-                  isEdukasiActive ? "underline underline-offset-8 decoration-4 decoration-sky-950 text-sky-950" : ""
+                className={`flex items-center justify-between w-full py-2 px-3 font-medium border-b border-gray-100 md:w-auto md:hover:bg-transparent md:border-0 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
+                  isEdukasiActive ? "text-gray-50 underline underline-offset-8 underline-mb-4 decoration-4 decoration-white" : "text-sky-200 hover:text-sky-300"
                 }`}
               >
                 Edukasi{" "}
@@ -82,8 +82,8 @@ const NavbarHome = () => {
             <li>
               <Link
                 to="/kidspedia"
-                className={`block py-2 px-3 text-sky-700 border-b border-gray-100 hover:text-zinc-700 md:hover:bg-transparent md:border-0 md:hover:text-zinc-700 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
-                  isActiveLink("/kidspedia") ? "underline underline-offset-8 decoration-4 decoration-sky-950 text-sky-950" : ""
+                className={`block py-2 px-3 border-b border-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
+                  isActiveLink("/kidspedia") ? "text-gray-50 underline underline-offset-8 underline-mb-4 decoration-4 decoration-white" : "text-sky-200 hover:text-sky-300"
                 }`}
               >
                 Kidspedia
@@ -92,8 +92,8 @@ const NavbarHome = () => {
             <li>
               <Link
                 to="/sharenting"
-                className={`block py-2 px-3 text-sky-700 border-b border-gray-100 hover:text-zinc-700 md:hover:bg-transparent md:border-0 md:hover:text-zinc-700 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
-                  isActiveLink("/sharenting") ? "underline underline-offset-8 underline-mb-4 decoration-4 decoration-sky-950 text-sky-950" : ""
+                className={`block py-2 px-3 border-b border-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
+                  isActiveLink("/sharenting") ? "text-gray-50 underline underline-offset-8 underline-mb-4 decoration-4 decoration-white" : "text-sky-200 hover:text-sky-300"
                 }`}
               >
                 Sharenting
@@ -101,8 +101,10 @@ const NavbarHome = () => {
             </li>
             <li>
               <Link
-                href="#"
-                className="block py-2 px-3 text-sky-700 border-b border-gray-100 hover:text-zinc-700 md:hover:bg-transparent md:border-0 md:hover:text-zinc-700 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                to="/artikel"
+                className={`block py-2 px-3 border-b border-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
+                  isActiveLink("/artikel") ? "text-gray-50 underline underline-offset-8 underline-mb-4 decoration-4 decoration-white" : "text-sky-200 hover:text-sky-300"
+                }`}
               >
                 Artikel
               </Link>
@@ -111,52 +113,40 @@ const NavbarHome = () => {
         </div>
       </div>
       {isDropdownOpen && (
-        <div id="mega-menu-full-dropdown" className="mt-1 bg-sky-300 border-gray-200 shadow-sm border-y rounded-b-3xl dark:bg-gray-900 dark:border-gray-600">
-          <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-sky-700 dark:textWhite sm:grid-cols-2 md:grid-cols-3 md:px-6">
+        <div id="mega-menu-full-dropdown" className="mt-1 shadow-sm rounded-b-3xl dark:bg-gray-900 ">
+          <div className="grid max-w-screen-xl px-4 py-10 mx-auto  dark:textWhite sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button">
-              <Link to="/edukasi/panduanasuh">
-                <li>
-                  <a href="#" className="block p-3 rounded-lg hover:text-zinc-700 dark:hover:bg-gray-700">
+              <li>
+                <Link to="/edukasi/panduanasuh" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
+                  <img className="object-cover w-full h-8 md:h-auto md:w-24 md:rounded-none md:rounded-s-lg" src="/assets/dropdown1.png" alt="" />
+                  <div className="flex flex-col justify-between px-8 leading-normal">
                     <div className="font-semibold">Panduan Pola Asuh Anak</div>
-                    <span className="text-sm text-sky-700 dark:text-gray-400">Panduan pola asuh sesuai rentang usia anak.</span>
-                  </a>
-                </li>
-              </Link>
+                    <span className="text-sm dark:text-gray-400">Panduan pola asuh sesuai rentang usia anak.</span>
+                  </div>
+                </Link>
+              </li>
             </ul>
             <ul>
               <li>
-                <a href="#" className="block p-3 rounded-lg hover:text-gray-50 dark:hover:bg-gray-700">
-                  <div className="font-semibold">Gaya Parenting</div>
-                  <span className="text-sm text-white dark:text-gray-400">Gaya parenting dan perilakunya kepada anak</span>
-                </a>
-              </li>
-            </ul>
-            <ul className="hidden md:block">
-              <li>
-                <a href="#" className="block p-3 rounded-lg hover:text-gray-50 dark:hover:bg-gray-700">
-                  <div className="font-semibold">Kenali Gaya Parentingmu</div>
-                  <span className="text-sm text-white dark:text-gray-400">Quiz mengenali gaya parenting orang tua</span>
-                </a>
-              </li>
-
-              <Link to="/edukasi/gayaparenting">
-                <li>
-                  <a href="#" className="block p-3 rounded-lg hover:text-zinc-700 dark:hover:bg-gray-700">
+                <Link to="/edukasi/gayaparenting" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
+                  <img className="object-cover w-full h-8 md:h-auto md:w-24 md:rounded-none md:rounded-s-lg" src="/assets/dropdown2.png" alt="" />
+                  <div className="flex flex-col justify-between px-8 leading-normal">
                     <div className="font-semibold">Gaya Parenting</div>
-                    <span className="text-sm text-sky-700 dark:text-gray-400">Gaya parenting dan perilakunya kepada anak</span>
-                  </a>
-                </li>
-              </Link>
+                    <span className="text-sm dark:text-gray-400">Gaya parenting dan perilakunya kepada anak</span>
+                  </div>
+                </Link>
+              </li>
             </ul>
             <ul>
-              <Link to="/edukasi/kenaligaya">
-                <li>
-                  <a href="#" className="block p-3 rounded-lg hover:text-zinc-700 dark:hover:bg-gray-700">
+              <li>
+                <Link to="/edukasi/kenaligaya" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
+                  <img className="object-cover w-full h-8 md:h-auto md:w-24 md:rounded-none md:rounded-s-lg" src="/assets/dropdown3.png" alt="" />
+                  <div className="flex flex-col justify-between px-8 leading-normal">
                     <div className="font-semibold">Kenali Gaya Parentingmu</div>
-                    <span className="text-sm text-sky-700 dark:text-gray-400">Quiz mengenali gaya parenting orang tua</span>
-                  </a>
-                </li>
-              </Link>
+                    <span className="text-sm dark:text-gray-400">Quiz mengenali gaya parenting orang tua</span>
+                  </div>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
