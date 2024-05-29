@@ -29,7 +29,7 @@ function App() {
       <Route path="/kidspedia" element={<Kidspedia />} />
       <Route path="/sharenting" element={<Sharenting />} />
       <Route path="/edukasi/panduanasuh" element={<PanduanAsuh />} />
-      <Route path="/article" element={<ListArticle />} />
+      <Route path="/artikel" element={<ListArticle />} />
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<HomeDashboard />} />
       <Route path="/data-mitra" element={<DataMitra />} />
