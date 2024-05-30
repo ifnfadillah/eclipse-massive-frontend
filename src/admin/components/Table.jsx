@@ -80,7 +80,7 @@ const Table = ({ headers, data, setData }) => {
                                         ))}
                                         <td className="px-12 py-3 flex items-center justify-end space-x-4">
                                             <Button
-                                                classname="h-9 w-20 font-secondary text-xs rounded-3xl font-medium bg-amber-500 hover:bg-amber-600 text-white"
+                                                classname="h-9 w-20 font-secondary text-xs rounded-3xl font-medium bg-amber-300 hover:bg-amber-400 text-black"
                                                 type="button"
                                             >
                                                 Ubah
