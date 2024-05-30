@@ -8,7 +8,7 @@ function listArticle() {
   return (
     <div className="artikel bg-slate-50">
       <NavbarHome />
-      <SectionCTAarticle />
+      <CTAarticle />
       <ArtikelList />
       <Banner />
       <Footer />
