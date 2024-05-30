@@ -1,11 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import HomeDashboard from "./admin/dashboard/HomeDashboard";
 import Login from "./admin/login/Login";
-import HomeUser from "./user/pages/home";
-import PanduanAsuh from "./user/pages/panduanasuh";
-import Kidspedia from "./user/pages/kidspedia";
-import Sharenting from "./user/pages/sharenting";
-import ListArticle from "./user/pages/listArtikel";
+
 import NotFound from "./pages/404";
 import "./index.css";
 import DataMitra from "./admin/mitra/DataMitra";
@@ -19,16 +15,21 @@ import TambahKomunitas from "./admin/komunitas/TambahKomunitas";
 import DataArtikel from "./admin/artikel/DataArtikel";
 import TambahArtikel from "./admin/artikel/TambahArtikel";
 
+// user
+import HomeUser from "./user/pages/home";
+import Kidspedia from "./user/pages/kidspedia";
+import Sharenting from "./user/pages/sharenting";
+import PanduanAsuh from "./user/pages/panduanasuh";
+import ListArticle from "./user/pages/listArtikel";
+
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomeUser />}>
-        <Route index path="/" element={<HomeUser />} />
-        <Route path="/kidspedia" element={<Kidspedia />} />
-        <Route path="/sharenting" element={<Sharenting />} />
-        <Route path="/edukasi/panduanasuh" element={<PanduanAsuh />} />
-        <Route path="/article" element={<ListArticle />} />
-      </Route>
+      <Route index path="/" element={<HomeUser />} />
+      <Route path="/kidspedia" element={<Kidspedia />} />
+      <Route path="/sharenting" element={<Sharenting />} />
+      <Route path="/edukasi/panduanasuh" element={<PanduanAsuh />} />
+      <Route path="/artikel" element={<ListArticle />} />
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<HomeDashboard />} />
       <Route path="/data-mitra" element={<DataMitra />} />

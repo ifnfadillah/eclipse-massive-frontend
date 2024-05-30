@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import CardArtikel from "../components/cardArtikel";
 import JudulFitur from "../components/JudulFitur";
+import Pagination from "../components/paginationUser";
 
 function ArtikelList() {
   const articles = [
@@ -26,7 +27,7 @@ function ArtikelList() {
       title:
         "Bagaimana Menentukan Usia yang Tepat Untuk Anak Memulai Berpuasa?",
       description:
-        "Sebelum mengajak anak berpuasa, penting untuk menjelaskan arti puasa dengan bahasa yang sederhana. ",
+        "Sebelum mengajak anak berpuasa, penting untuk menjelaskan arti puasa dengan bahasa yang sederhana.",
       date: "11 Januari 2024",
     },
     {
@@ -34,7 +35,7 @@ function ArtikelList() {
       imageSrc: "/assets/article4.png",
       title: "Mengembangkan Rasa Percaya Diri Anak",
       description:
-        "Mengembangkan rasa percaya diri anak adalah hal penting yang harus dilakukan oleh orang tua agar anak dapat tumbuh menjadi pribadi yang madiri, tangguh, dan optimis.",
+        "Mengembangkan rasa percaya diri anak adalah hal penting yang harus dilakukan oleh orang tua agar anak dapat tumbuh menjadi pribadi yang mandiri, tangguh, dan optimis.",
       date: "17 Mei 2024",
     },
     {
@@ -42,7 +43,7 @@ function ArtikelList() {
       imageSrc: "/assets/article5.png",
       title: "Generasi Digital dan Model Pengasuhan Positif",
       description:
-        "Sebagai orang tua tentu arus perkembangan zama tidak dapat dilawan.",
+        "Sebagai orang tua tentu arus perkembangan zaman tidak dapat dilawan.",
       date: "10 Mei 2024",
     },
     {
@@ -50,12 +51,12 @@ function ArtikelList() {
       imageSrc: "/assets/article6.png",
       title: "Cara Orangtua Menyikapi Anak Introvert dan Ekstrovert",
       description:
-        "Jika orantua merasa terdorong ingin mengubah sifat introvert atau ekstrovert pada anak, maka sebaiknya tinjau kembali penyebabnya.",
+        "Jika orang tua merasa terdorong ingin mengubah sifat introvert atau ekstrovert pada anak, maka sebaiknya tinjau kembali penyebabnya.",
       date: "13 Mei 2024",
     },
     {
       id: 7,
-      imageSrc: "/assets/article4.png",
+      imageSrc: "/assets/article7.png",
       title: "Cara Efektif Belajar Online",
       description:
         "Belajar online dapat menjadi tantangan. Berikut adalah cara-cara efektif untuk memaksimalkannya.",
@@ -63,21 +64,36 @@ function ArtikelList() {
     },
     {
       id: 8,
-      imageSrc: "/assets/article4.png",
-      title: "Cara Efektif Belajar Online",
+      imageSrc: "/assets/article8.png",
+      title: "Pentingnya Menjaga Kesehatan Mental Anak",
       description:
-        "Belajar online dapat menjadi tantangan. Berikut adalah cara-cara efektif untuk memaksimalkannya.",
-      date: "10 Mei 2024",
+        "Menjaga kesehatan mental anak sama pentingnya dengan menjaga kesehatan fisik mereka.",
+      date: "18 Mei 2024",
     },
     {
       id: 9,
-      imageSrc: "/assets/article4.png",
-      title: "Cara Efektif Belajar Online",
+      imageSrc: "/assets/article9.png",
+      title: "Strategi Efektif Mengelola Waktu Belajar Anak",
       description:
-        "Belajar online dapat menjadi tantangan. Berikut adalah cara-cara efektif untuk memaksimalkannya.",
-      date: "10 Mei 2024",
+        "Mengelola waktu belajar anak dengan baik adalah kunci untuk mencapai keseimbangan antara belajar dan bermain.",
+      date: "20 Mei 2024",
     },
   ];
+
+  // Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+  const totalPages = Math.ceil(articles.length / itemsPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const renderData = () => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    return articles.slice(startIndex, endIndex);
+  };
 
   return (
     <div className="container mx-auto my-20">
@@ -86,11 +102,11 @@ function ArtikelList() {
           Kumpulan <JudulFitur>Artikel</JudulFitur>
         </h1>
         <p className="text-xl mb-6">
-          Simak beberapa kumpulan artikel dibawah ini
+          Simak beberapa kumpulan artikel di bawah ini
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-1 gap-y-1/4 mx-10">
-        {articles.slice(0, 6).map((article) => (
+        {renderData().map((article) => (
           <div key={article.id} className="px-2">
             <CardArtikel
               imageSrc={article.imageSrc}
@@ -101,6 +117,15 @@ function ArtikelList() {
           </div>
         ))}
       </div>
+      {articles.length > itemsPerPage && (
+        <div className="flex justify-center mt-4">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+          />
+        </div>
+      )}
     </div>
   );
 }
