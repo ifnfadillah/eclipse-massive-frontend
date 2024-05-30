@@ -1,7 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import HomeDashboard from "./admin/dashboard/HomeDashboard";
 import Login from "./admin/login/Login";
-
+import HomeUser from "./user/pages/home";
+import PanduanAsuh from "./user/pages/panduanasuh";
+import Kidspedia from "./user/pages/kidspedia";
+import Sharenting from "./user/pages/sharenting";
 import ListArticle from "./user/pages/listArtikel";
 import NotFound from "./pages/404";
 import "./index.css";
@@ -9,10 +12,10 @@ import DataMitra from "./admin/mitra/DataMitra";
 import TambahMitra from "./admin/mitra/TambahMitra";
 import DataKidspedia from "./admin/kidspedia/DataKidspedia";
 import TambahKidspedia from "./admin/kidspedia/TambahKidspedia";
-import DataWebinar from "./admin/sharenting/DataWebinar";
-import TambahWebinar from "./admin/sharenting/TambahWebinar";
-import DataKomunitas from "./admin/sharenting/DataKomunitas";
-import TambahKomunitas from "./admin/sharenting/TambahKomunitas";
+import DataWebinar from "./admin/webinar/DataWebinar";
+import TambahWebinar from "./admin/webinar/TambahWebinar";
+import DataKomunitas from "./admin/komunitas/DataKomunitas";
+import TambahKomunitas from "./admin/komunitas/TambahKomunitas";
 import DataArtikel from "./admin/artikel/DataArtikel";
 import TambahArtikel from "./admin/artikel/TambahArtikel";
 

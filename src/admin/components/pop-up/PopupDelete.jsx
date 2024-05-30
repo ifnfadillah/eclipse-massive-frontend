@@ -4,7 +4,7 @@ import Button from '../Button';
 const PopupDelete = ({ onConfirm, onCancel }) => {
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 -top-10">
             <div className="relative p-4 w-full max-w-md max-h-full">
                 <div className="relative pt-8 pb-4 h-70 bg-white rounded-lg shadow">
                     <div className="p-4 md:p-5 text-center">

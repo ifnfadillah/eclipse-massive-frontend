@@ -2,18 +2,12 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, Handshake, Baby, UsersRound, Newspaper, LogOut, ChevronDown, ChevronUp } from "lucide-react";
 
-function Sidebar({ isSidebarOpen, toggleSidebar }) {
+function Sidebar({ isSidebarOpen }) {
   const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
-  const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
   const location = useLocation();
 
   const toggleDropdown1 = () => {
     setIsDropdownOpen1(!isDropdownOpen1);
-  };
-
-  const toggleDropdown2 = () => {
-    setIsDropdownOpen2(!isDropdownOpen2);
-    setIsDropdownOpen1(false);
   };
 
   return (
