@@ -62,13 +62,15 @@ const Faq = () => {
                     <h3 id={`accordion-collapse-heading-${index}`}>
                       <button
                         type="button"
-                        className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 bg-white border-b-0 rounded-lg shadow-lg"
+                        className={`flex items-center justify-between w-full p-6 font-primary font-medium text-2xl text-left bg-white border-b-0 shadow-lg transition-colors duration-300 ${
+                          activeIndex === index ? "text-sky-500 rounded-t-lg" : "text-sky-900 rounded-lg"
+                        }`}
                         onClick={() => handleToggle(index)}
                         aria-expanded={activeIndex === index}
                         aria-controls={`accordion-collapse-body-${index}`}
                       >
-                        <span className="text-blue-900">{item.question}</span>
-                        <svg data-accordion-icon className={`w-6 h-6 shrink-0 transform transition-transform duration-300 ${activeIndex === index ? "rotate-180" : ""}`} fill="currentColor" viewBox="0 0 20 20">
+                        <span>{item.question}</span>
+                        <svg data-accordion-icon className={`w-6 h-6 shrink-0 transform transition-transform text-blue-900 duration-300 ${activeIndex === index ? "rotate-180" : ""}`} fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 01.02-1.06z" clipRule="evenodd"></path>
                         </svg>
                       </button>
@@ -76,11 +78,11 @@ const Faq = () => {
                     <div
                       id={`accordion-collapse-body-${index}`}
                       ref={(el) => (contentRefs.current[index] = el)}
-                      className="transition-all duration-300 overflow-hidden max-h-0 shadow-lg rounded-lg"
+                      className="transition-all duration-300 overflow-hidden max-h-0 shadow-lg rounded-b-lg"
                       aria-labelledby={`accordion-collapse-heading-${index}`}
                     >
-                      <div className="p-5 bg-white rounded-b-lg">
-                        <p className="mb-2 text-gray-500">{item.answer}</p>
+                      <div className="p-6 bg-white">
+                        <p className="mb-2 text-sky-900 text-lg">{item.answer}</p>
                       </div>
                     </div>
                   </div>

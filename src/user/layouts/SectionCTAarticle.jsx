@@ -3,7 +3,7 @@ import JudulCTA from "../components/JudulCTA";
 import DeskripsiCta from "../components/DeskripsiCta";
 import ButtonCTA from "../components/CTA/Button/ButtonCTA";
 
-const SectionCTAarticle = () => {
+const CTAarticle = () => {
   return (
     <div className="section">
       <section className="bg-slate-50 dark:bg-gray-900">
@@ -16,7 +16,7 @@ const SectionCTAarticle = () => {
               beragam topik mulai dari kesehatan anak, pendidikan, psikologi
               anak, hingga hubungan keluarga!
             </DeskripsiCta>
-            <ButtonCta>Lihat Panduan Pola Asuh</ButtonCta>
+            <ButtonCTA>Lihat Panduan Pola Asuh</ButtonCTA>
           </div>
           <div className="flex justify-end md:mt-0">
             <img
@@ -36,4 +36,4 @@ const SectionCTAarticle = () => {
   );
 };
 
-export default SectionCTAarticle;
+export default CTAarticle;
