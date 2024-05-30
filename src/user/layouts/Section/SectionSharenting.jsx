@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import SectionCTA from "../components/CTA/SectionCTA";
+import SectionCTA from "../../components/CTA/SectionCTA";
 
 const SectionCTA3 = () => {
   return (

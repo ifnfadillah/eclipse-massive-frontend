@@ -4,14 +4,15 @@ import { Link, useLocation } from "react-router-dom";
 const NavbarHome = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const buttonRef = useRef(null);
   const location = useLocation();
 
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+    setIsDropdownOpen((prevState) => !prevState);
   };
 
   const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target) && !buttonRef.current.contains(event.target)) {
       setIsDropdownOpen(false);
     }
   };
@@ -47,7 +48,7 @@ const NavbarHome = () => {
           aria-expanded={isDropdownOpen}
         >
           <span className="sr-only">Open main menu</span>
-          <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <svg className={`w-5 h-5 transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : "rotate-0"}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
           </svg>
         </button>
@@ -74,7 +75,7 @@ const NavbarHome = () => {
                 }`}
               >
                 Edukasi{" "}
-                <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <svg className={`w-2.5 h-2.5 ms-3 transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : "rotate-0"}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                 </svg>
               </button>
@@ -112,45 +113,43 @@ const NavbarHome = () => {
           </ul>
         </div>
       </div>
-      {isDropdownOpen && (
-        <div id="mega-menu-full-dropdown" className="mt-1 shadow-sm rounded-b-3xl dark:bg-gray-900 ">
-          <div className="grid max-w-screen-xl px-4 py-10 mx-auto  dark:textWhite sm:grid-cols-2 md:grid-cols-3 md:px-6">
-            <ul aria-labelledby="mega-menu-full-dropdown-button">
-              <li>
-                <Link to="/edukasi/panduanasuh" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
-                  <img className="object-cover w-full h-8 md:h-auto md:w-24 md:rounded-none md:rounded-s-lg" src="/assets/dropdown1.png" alt="" />
-                  <div className="flex flex-col justify-between px-8 leading-normal">
-                    <div className="font-semibold">Panduan Pola Asuh Anak</div>
-                    <span className="text-sm dark:text-gray-400">Panduan pola asuh sesuai rentang usia anak.</span>
-                  </div>
-                </Link>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <Link to="/edukasi/gayaparenting" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
-                  <img className="object-cover w-full h-8 md:h-auto md:w-24 md:rounded-none md:rounded-s-lg" src="/assets/dropdown2.png" alt="" />
-                  <div className="flex flex-col justify-between px-8 leading-normal">
-                    <div className="font-semibold">Gaya Parenting</div>
-                    <span className="text-sm dark:text-gray-400">Gaya parenting dan perilakunya kepada anak</span>
-                  </div>
-                </Link>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <Link to="/edukasi/kenaligaya" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
-                  <img className="object-cover w-full h-8 md:h-auto md:w-24 md:rounded-none md:rounded-s-lg" src="/assets/dropdown3.png" alt="" />
-                  <div className="flex flex-col justify-between px-8 leading-normal">
-                    <div className="font-semibold">Kenali Gaya Parentingmu</div>
-                    <span className="text-sm dark:text-gray-400">Quiz mengenali gaya parenting orang tua</span>
-                  </div>
-                </Link>
-              </li>
-            </ul>
-          </div>
+      <div ref={dropdownRef} id="mega-menu-full-dropdown" className={`mt-1 shadow-sm rounded-b-3xl dark:bg-gray-900 transition-all duration-300 ${isDropdownOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"}`}>
+        <div className="grid max-w-screen-xl px-4 py-10 mx-auto dark:textWhite sm:grid-cols-2 md:grid-cols-3 md:px-6">
+          <ul aria-labelledby="mega-menu-full-dropdown-button">
+            <li>
+              <Link to="/edukasi/panduanasuh" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
+                <img className="object-cover w-full h-8 md:h-auto md:w-24 md:rounded-none md:rounded-s-lg" src="/assets/dropdown1.png" alt="" />
+                <div className="flex flex-col justify-between px-8 leading-normal">
+                  <div className="font-semibold">Panduan Pola Asuh Anak</div>
+                  <span className="text-sm dark:text-gray-400">Panduan pola asuh sesuai rentang usia anak.</span>
+                </div>
+              </Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Link to="/edukasi/gayaparenting" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
+                <img className="object-cover w-full h-8 md:h-auto md:w-24 md:rounded-none md:rounded-s-lg" src="/assets/dropdown2.png" alt="" />
+                <div className="flex flex-col justify-between px-8 leading-normal">
+                  <div className="font-semibold">Gaya Parenting</div>
+                  <span className="text-sm dark:text-gray-400">Gaya parenting dan perilakunya kepada anak</span>
+                </div>
+              </Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Link to="/edukasi/kenaligaya" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
+                <img className="object-cover w-full h-8 md:h-auto md:w-24 md:rounded-none md:rounded-s-lg" src="/assets/dropdown3.png" alt="" />
+                <div className="flex flex-col justify-between px-8 leading-normal">
+                  <div className="font-semibold">Kenali Gaya Parentingmu</div>
+                  <span className="text-sm dark:text-gray-400">Quiz mengenali gaya parenting orang tua</span>
+                </div>
+              </Link>
+            </li>
+          </ul>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
