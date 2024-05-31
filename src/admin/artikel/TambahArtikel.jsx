@@ -17,7 +17,7 @@ function TambahArtikel() {
                             name="foto"
                             text="Foto" />
                         <Input text="Tanggal" name="date" type="date" placeholder="Pilih tanggal" />
-                        <Input text="Deskripsi" name="deskripsi" type="description" placeholder="Masukkan deskripsi" />
+                        <Input text="Deskripsi" name="deskripsi" type="desc" placeholder="Masukkan deskripsi" />
                     </div>
                     <div className="mt-6 flex space-x-4 justify-end">
                         <Button

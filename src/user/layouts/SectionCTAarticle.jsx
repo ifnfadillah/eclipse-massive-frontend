@@ -1,9 +1,9 @@
 import React from "react";
 import JudulCTA from "../components/JudulCTA";
 import DeskripsiCta from "../components/DeskripsiCta";
-import ButtonCta from "../components/CTA/Button/ButtonCTA";
+import ButtonCTA from "../components/CTA/Button/ButtonCTA";
 
-const ListArticle = () => {
+const CTAarticle = () => {
   return (
     <div className="section">
       <section className="bg-slate-50 dark:bg-gray-900">
@@ -36,4 +36,4 @@ const ListArticle = () => {
   );
 };
 
-export default ListArticle;
+export default CTAarticle;

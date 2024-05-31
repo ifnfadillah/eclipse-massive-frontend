@@ -1,17 +1,21 @@
 // import { useState } from "react";
 
+import Deskripsi from "../components/Deskripsi";
+import Judul from "../components/Judul";
+import JudulFitur from "../components/JudulFitur";
+
 const VideoShowcase = () => {
   return (
     <div className="Video">
       <section className="bg-slate-50 dark:bg-gray-900">
         <div className="gap-8 items-center py-16 px-8 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
           <div className="mt-4 md:mt-0">
-            <h2 className="mb-4 text-5xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-              Tentang <strong className="text-blue-700">Parentify</strong>
-            </h2>
-            <p className="mb-4 font-light text-gray-500 md:text-xl dark:text-gray-400">
-              Parentify merupakan website edukasi parenting untuk orang tua memiliki pemahaman terkait pola asuh yang tepat kepada anak. Sehingga anak-anak di Indonesia dapat tumbuh dengan optimal.
-            </p>
+            <Judul>
+              {" "}
+              Tentang
+              <JudulFitur> Parentify</JudulFitur>
+            </Judul>
+            <Deskripsi>Parentify merupakan website edukasi parenting untuk orang tua memiliki pemahaman terkait pola asuh yang tepat kepada anak. Sehingga anak-anak di Indonesia dapat tumbuh dengan optimal.</Deskripsi>
           </div>
           <div className="mt-8 md:mt-0">
             <img className="w-full dark:hidden mt-32" src="/assets/Showcase.png" alt="showcase" />
