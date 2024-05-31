@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
-import CardArtikel from "../../components/cardArtikel";
-import JudulFitur from "../../components/JudulFitur";
-import Pagination from "../../components/paginationUser";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import CardArtikel from "../components/cardArtikel";
 
-function ArtikelList() {
+function DetailArtikel() {
+  const { id } = useParams();
   const articles = [
     {
       id: 1,
@@ -125,59 +124,78 @@ function ArtikelList() {
     },
   ];
 
-  // Pagination
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
-  const totalPages = Math.ceil(articles.length / itemsPerPage);
-
   useEffect(() => {
-    window.scrollTo(0, 0); // Reset scroll ke atas setiap kali currentPage berubah
-  }, [currentPage]); // Bergantung pada perubahan currentPage
+    window.scrollTo(0, 0); // Reset scroll ke atas setiap kali id berubah
+  }, [id]); // Bergantung pada perubahan id
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
+  const article = articles.find((article) => article.id === parseInt(id));
 
-  const renderData = () => {
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    return articles.slice(startIndex, endIndex);
-  };
+  if (!article) {
+    return <div>Artikel tidak ditemukan</div>;
+  }
+
+  const displayedArticles = articles
+    .filter((art) => art.id !== parseInt(id))
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 3);
 
   return (
-    <div className="container py-8 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-      <div className="mb-10 text-center sm:text-left">
-        <h1 className="text-3xl sm:text-4xl font-primary mb-3">
-          <span className="font-semibold">Kumpulan </span>
-          <JudulFitur>Artikel</JudulFitur>
-        </h1>
-        <p className="text-lg font-primary sm:text-xl mb-6">
-          Simak beberapa kumpulan artikel di bawah ini
-        </p>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-7 gap-x-4">
-        {renderData().map((article) => (
-          <Link key={article.id} to={`/artikel/${article.id}`} className="mx-2">
-            <CardArtikel
-              imageSrc={article.imageSrc}
-              title={article.title}
-              description={article.description}
-              date={article.date}
-            />
-          </Link>
-        ))}
-      </div>
-      {articles.length > itemsPerPage && (
-        <div className="flex justify-center mt-16">
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={handlePageChange}
-          />
+    <div className="w-full px-5 mt-5 sm:px-8 lg:px-20 py-10 flex flex-col items-center gap-12">
+      <div className="w-full max-w-[1290px] rounded-[25px] flex flex-col gap-3">
+        <div className="text-neutral-700 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-primary leading-20">
+          {article.title}
         </div>
-      )}
+        <div className="text-neutral-400 text-lg font-semibold font-primary">
+          {article.date} - {article.author}
+        </div>
+      </div>
+      <img
+        className="w-full max-w-[1200px] h-[467px] rounded-[20px] object-cover"
+        src={article.imageSrc}
+        alt={article.title}
+      />
+      <div className="w-full max-w-[1290px] rounded-[25px] flex flex-col gap-6">
+        <div className="text-neutral-700 rounded-[25px] p-6 bg-zinc-100 text-base sm:text-lg md:text-xl font-primary leading-9">
+          {article.description.map((paragraph, index) => (
+            <p key={index} className="mb-6 text-justify">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      </div>
+      {/* List Artikel */}
+      <div className="container py-8 max-w-screen-xl sm:py-16 lg:px-6 mb-8">
+        <div className="flex flex-row justify-between mb-10 text-center sm:text-left">
+          <h1 className="text-3xl sm:text-4xl font-primary mb-3 font-semibold">
+            Artikel Lainnya
+          </h1>
+          <Link to="/artikel-list">
+            <div className="w-[154px] h-[51px] px-5 py-[15px] bg-white rounded-xl shadow border-2 border-sky-700 text-sky-700 justify-center items-center gap-2.5 inline-flex hover:bg-sky-700 hover:text-sky-50 transition-all duration-300">
+              <div className=" text-sm font-medium font-primary ">
+                Selengkapnya
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-7 gap-x-4">
+          {displayedArticles.map((article) => (
+            <Link
+              key={article.id}
+              to={`/artikel/${article.id}`}
+              className="mx-2"
+            >
+              <CardArtikel
+                imageSrc={article.imageSrc}
+                title={article.title}
+                description={article.description}
+                date={article.date}
+              />
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
 
-export default ArtikelList;
+export default DetailArtikel;

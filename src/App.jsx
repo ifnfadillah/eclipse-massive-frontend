@@ -25,7 +25,7 @@ import ListArticle from "./user/pages/listArtikel";
 import Komunitas from "./user/pages/komunitas";
 import DetailKomunitas from "./user/pages/DetailKomunitas";
 import DetailWebinar from "./user/pages/DetailWebinar";
-
+import Artikel from "./user/pages/artikel";
 
 function App() {
   return (
@@ -38,7 +38,8 @@ function App() {
       <Route path="/sharenting-komunitas" element={<Komunitas />} />
       <Route path="/sharenting-komunitas/:id" element={<DetailKomunitas />} />
       <Route path="/edukasi/panduanasuh" element={<PanduanAsuh />} />
-      <Route path="/artikel" element={<ListArticle />} />
+      <Route path="/artikel-list" element={<ListArticle />} />
+      <Route path="/artikel/:id" element={<Artikel />} />
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<HomeDashboard />} />
       <Route path="/data-mitra" element={<DataMitra />} />
