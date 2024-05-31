@@ -14,11 +14,7 @@ function CardArtikel({ imageSrc, title, description, date }) {
       <div className="self-stretch grow shrink basis-0 px-4 sm:px-[15px] py-3 sm:py-2.5 bg-white rounded-b-lg flex flex-col justify-between items-start">
         <div className="self-stretch flex flex-col justify-start items-start gap-1">
           <h6
-<<<<<<< HEAD
             className="card-title w-full text-sky-700 text-base font-bold font-primary transition-colors duration-300 ease-in-out"
-=======
-            className="card-title w-full text-sky-700 text-base sm:text-base font-bold font-primary transition-colors duration-300 ease-in-out"
->>>>>>> main
             style={{
               display: "-webkit-box",
               WebkitBoxOrient: "vertical",
