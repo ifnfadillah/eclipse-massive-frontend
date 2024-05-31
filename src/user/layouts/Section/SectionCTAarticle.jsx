@@ -9,7 +9,7 @@ const CTAarticle = () => {
         deksripsi=" Kumpulan berita seputar parenting untuk orang tua dalam menambah wawasan dan pengetahuan terkait pola asuh kepada anak. Temukan beragam topik mulai dari kesehatan anak, pendidikan, psikologi anak, hingga hubungan keluarga!"
         imgURL="/assets/ArticleSection.png"
       >
-        Eksplor Artikel
+        Jelajahi Artikel
       </SectionCTA>
     </div>
   );
