@@ -19,8 +19,13 @@ import TambahArtikel from "./admin/artikel/TambahArtikel";
 import HomeUser from "./user/pages/home";
 import Kidspedia from "./user/pages/kidspedia";
 import Sharenting from "./user/pages/sharenting";
+import Webinar from "./user/pages/webinar";
 import PanduanAsuh from "./user/pages/panduanasuh";
 import ListArticle from "./user/pages/listArtikel";
+import Komunitas from "./user/pages/komunitas";
+import DetailKomunitas from "./user/pages/DetailKomunitas";
+import DetailWebinar from "./user/pages/DetailWebinar";
+
 
 function App() {
   return (
@@ -28,6 +33,10 @@ function App() {
       <Route index path="/" element={<HomeUser />} />
       <Route path="/kidspedia" element={<Kidspedia />} />
       <Route path="/sharenting" element={<Sharenting />} />
+      <Route path="/sharenting-webinar" element={<Webinar />} />
+      <Route path="/sharenting-webinar/:id" element={<DetailWebinar />} />
+      <Route path="/sharenting-komunitas" element={<Komunitas />} />
+      <Route path="/sharenting-komunitas/:id" element={<DetailKomunitas />} />
       <Route path="/edukasi/panduanasuh" element={<PanduanAsuh />} />
       <Route path="/artikel" element={<ListArticle />} />
       <Route path="/login" element={<Login />} />

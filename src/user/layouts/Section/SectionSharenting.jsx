@@ -1,14 +1,19 @@
 // import { useState } from "react";
 import SectionCTA from "../../components/CTA/SectionCTA";
 
-const SectionCTA3 = () => {
+const CTASharenting = () => {
   return (
     <div className="section">
-      <SectionCTA judul1="Halo" imgURL="./assets/family-section2.png">
-        HAHHA
+      <SectionCTA
+        judul1="Temukan Pengetahuan Baru Terkait Parenting di "
+        fitur="Sharenting"
+        deksripsi="Tempat terbaik bagi para orang tua untuk mendapatkan edukasi dan panduan dalam mengasuh anak dengan tepat dan mendukung tumbuh kembang anak untuk masa depan yang cerah."
+        imgURL="/assets/Sharenting.png"
+      >
+        Eksplor Sharenting
       </SectionCTA>
     </div>
   );
 };
 
-export default SectionCTA3;
+export default CTASharenting;

@@ -1,18 +1,15 @@
-import NavbarHome from "../components/Navbar/NavbarHome";
-import SectionSharenting from "../layouts/Section/SectionSharenting";
+import CTASharenting from "../layouts/Section/SectionSharenting";
 import FeaturesSharenting from "../layouts/FeaturesSharenting";
-import Footer from "../components/Footer";
 import BannerKomunitas from "../components/Banner/BannerKomunitas";
+import LayoutUser from "../layout";
 
 function Sharenting() {
   return (
-    <div className="sharenting bg-slate-50">
-      <NavbarHome />
-      <SectionSharenting />
+    <LayoutUser>
+      <CTASharenting />
       <FeaturesSharenting />
       <BannerKomunitas />
-      <Footer />
-    </div>
+    </LayoutUser>
   );
 }
 

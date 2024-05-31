@@ -14,7 +14,7 @@ function CardArtikel({ imageSrc, title, description, date }) {
       <div className="self-stretch grow shrink basis-0 px-[15px] py-2.5 bg-white rounded-b-lg flex flex-col justify-between items-start">
         <div className="self-stretch flex flex-col justify-start items-start gap-2.5">
           <h6
-            className="card-title w-full text-sky-700 text-base font-bold font-['Fira Sans'] transition-colors duration-300 ease-in-out"
+            className="card-title w-full text-sky-700 text-base font-bold font-primary transition-colors duration-300 ease-in-out"
             style={{
               display: "-webkit-box",
               WebkitBoxOrient: "vertical",
@@ -28,7 +28,7 @@ function CardArtikel({ imageSrc, title, description, date }) {
             {title}
           </h6>
           <div
-            className="self-stretch text-zinc-700 text-sm font-normal font-['Open Sans']"
+            className="self-stretch text-zinc-700 text-sm font-normal font-secondary"
             style={{
               display: "-webkit-box",
               WebkitBoxOrient: "vertical",
@@ -42,7 +42,7 @@ function CardArtikel({ imageSrc, title, description, date }) {
             {description}
           </div>
         </div>
-        <div className="self-stretch h-[21px] text-right text-neutral-400 text-sm font-normal font-['Fira Sans']">
+        <div className="self-stretch h-[21px] text-right text-neutral-400 text-sm font-normal font-primary">
           {date}
         </div>
       </div>
