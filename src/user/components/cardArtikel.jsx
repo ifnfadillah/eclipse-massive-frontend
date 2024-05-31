@@ -3,18 +3,18 @@ import "./CardHover.css";
 
 function CardArtikel({ imageSrc, title, description, date }) {
   return (
-    <div className="card-container w-[390px] h-[320px] rounded-lg shadow-2xl flex flex-col justify-center items-center mx-auto my-10">
-      <div className="w-full h-[178px] rounded-t-lg overflow-hidden justify-center items-center flex">
+    <div className="card-container w-full sm:w-[390px] h-auto sm:h-[320px] rounded-lg shadow-2xl flex flex-col justify-center items-center mx-auto">
+      <div className="w-full h-[178px] sm:h-[178px] rounded-t-lg overflow-hidden flex justify-center items-center">
         <img
           className="card-image w-full h-full object-cover transition-transform duration-500 ease-in-out"
           src={imageSrc}
           alt="Card image"
         />
       </div>
-      <div className="self-stretch grow shrink basis-0 px-[15px] py-2.5 bg-white rounded-b-lg flex flex-col justify-between items-start">
-        <div className="self-stretch flex flex-col justify-start items-start gap-2.5">
+      <div className="self-stretch grow shrink basis-0 px-4 sm:px-[15px] py-3 sm:py-2.5 bg-white rounded-b-lg flex flex-col justify-between items-start">
+        <div className="self-stretch flex flex-col justify-start items-start gap-1">
           <h6
-            className="card-title w-full text-sky-700 text-base font-bold font-['Fira Sans'] transition-colors duration-300 ease-in-out"
+            className="card-title w-full text-sky-700 text-base sm:text-base font-bold font-primary transition-colors duration-300 ease-in-out"
             style={{
               display: "-webkit-box",
               WebkitBoxOrient: "vertical",
@@ -28,7 +28,7 @@ function CardArtikel({ imageSrc, title, description, date }) {
             {title}
           </h6>
           <div
-            className="self-stretch text-zinc-700 text-sm font-normal font-['Open Sans']"
+            className="self-stretch text-zinc-700 text-sm sm:text-sm font-normal font-primary"
             style={{
               display: "-webkit-box",
               WebkitBoxOrient: "vertical",

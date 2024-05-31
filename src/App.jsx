@@ -21,6 +21,7 @@ import Kidspedia from "./user/pages/kidspedia";
 import Sharenting from "./user/pages/sharenting";
 import PanduanAsuh from "./user/pages/panduanasuh";
 import ListArticle from "./user/pages/listArtikel";
+import Artikel from "./user/pages/artikel";
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
       <Route path="/kidspedia" element={<Kidspedia />} />
       <Route path="/sharenting" element={<Sharenting />} />
       <Route path="/edukasi/panduanasuh" element={<PanduanAsuh />} />
-      <Route path="/artikel" element={<ListArticle />} />
+      <Route path="/artikel-list" element={<ListArticle />} />
+      <Route path="/artikel/:id" element={<Artikel />} />
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<HomeDashboard />} />
       <Route path="/data-mitra" element={<DataMitra />} />

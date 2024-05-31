@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import JudulCTA from "../components/JudulCTA";
 import DeskripsiCta from "../components/DeskripsiCta";
 import ButtonCta from "../components/CTA/Button/ButtonCTA";
@@ -8,7 +8,7 @@ const ListArticle = () => {
     <div className="section">
       <section className="bg-slate-50 dark:bg-gray-900">
         <div className="flex flex-col items-center justify-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-          <div className="flex flex-col items-start mt-4 md:mt-0">
+          <div className="flex flex-col items-start mt-4 md:mt-0 font-primary">
             <JudulCTA>Eksplorasi Beragam Informasi Melalui Artikel</JudulCTA>
             <DeskripsiCta>
               Kumpulan berita seputar parenting untuk orang tua dalam menambah
@@ -16,7 +16,7 @@ const ListArticle = () => {
               beragam topik mulai dari kesehatan anak, pendidikan, psikologi
               anak, hingga hubungan keluarga!
             </DeskripsiCta>
-            <ButtonCta>Lihat Panduan Pola Asuh</ButtonCta>
+            <ButtonCta>Lihat Artikel</ButtonCta>
           </div>
           <div className="flex justify-end md:mt-0">
             <img
