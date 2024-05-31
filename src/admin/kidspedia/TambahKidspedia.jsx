@@ -11,7 +11,7 @@ function TambahKidspedia() {
       <div className="py-8 px-4 md:mx-52 max-w-xl  lg:py-13">
         <h2 className="mb-5 text-2xl font-semibold font-primary text-gray-900">Tambah Kidspedia</h2>
         <form action="" method="post">
-          <div class="grid gap-4 grid-cols-2 lg:grid-cols-6 sm:gap-6">
+          <div className="grid gap-4 grid-cols-2 lg:grid-cols-6 sm:gap-6">
             <Input text="Judul Bahan Belajar" name="judul" type="judul" placeholder="Masukkan Judul Bahan Belajar" />
             <InputDropdown
               name="category"

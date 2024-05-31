@@ -19,16 +19,19 @@ function DataKidspedia() {
         ["5", "Gambar Kebun", "kebun.png", "Lembar Mewarnai"],
         ["6", "Gambar Kebun", "kebun.png", "Lembar Mewarnai"],
         ["7", "Gambar Kebun", "kebun.png", "Lembar Mewarnai"],
-
     ];
     return (
         <Layout>
             <DataHeader
                 title="Data Kidspedia"
                 Placeholder="Cari Kidspedia"
-                addButtonLink="/data-kidspedia-tambah"
+                addButtonLink="/data-kidspedia/tambah"
             />
-            <Table headers={headers} data={data} />
+            <Table
+                headers={headers}
+                data={data}
+                editPath="/data-kidspedia/edit"
+                itemNameToDelete="judul" />
         </Layout>
     )
 }

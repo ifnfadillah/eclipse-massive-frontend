@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import Button from "./Button";
 import PopupDelete from './pop-up/PopupDelete';
 import Pagination from "./Pagination";
+import { Link } from 'react-router-dom';
 
-const Table = ({ headers, data, setData }) => {
+const Table = ({ headers, data, setData, editPath, itemNameToDelete }) => {
     // Pop Up Dialog Hapus
     const [isOpen, setIsOpen] = useState(false);
     const [itemToDelete, setItemToDelete] = useState(null);
 
-    const handleDelete = (index) => {
+    const handleDelete = (index, itemName) => {
         setItemToDelete(index);
         setIsOpen(true);
     };
@@ -83,10 +84,12 @@ const Table = ({ headers, data, setData }) => {
                                                 classname="h-9 w-20 font-secondary text-xs rounded-3xl font-medium bg-amber-300 hover:bg-amber-400 text-black"
                                                 type="button"
                                             >
-                                                Ubah
+                                                <Link to={`${editPath}/${row[0]}`}>
+                                                    Ubah
+                                                </Link>
                                             </Button>
                                             <Button
-                                                onClick={() => handleDelete(index)}
+                                                onClick={() => handleDelete(index, row[1])}
                                                 classname="h-9 w-20 font-secondary text-xs rounded-3xl font-medium bg-red-500 hover:bg-red-700 text-white"
                                                 type="button"
                                             >
@@ -113,6 +116,7 @@ const Table = ({ headers, data, setData }) => {
                 <PopupDelete
                     onConfirm={handleConfirm}
                     onCancel={handleCancel}
+                    itemName={itemNameToDelete}
                 />
             )}
         </>

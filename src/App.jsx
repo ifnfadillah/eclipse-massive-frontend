@@ -4,10 +4,13 @@ import Login from "./admin/login/Login";
 
 import NotFound from "./pages/404";
 import "./index.css";
+// admin
 import DataMitra from "./admin/mitra/DataMitra";
 import TambahMitra from "./admin/mitra/TambahMitra";
+import EditMitra from "./admin/mitra/EditMitra";
 import DataKidspedia from "./admin/kidspedia/DataKidspedia";
 import TambahKidspedia from "./admin/kidspedia/TambahKidspedia";
+import EditKidspedia from "./admin/kidspedia/EditKidspedia";
 import DataWebinar from "./admin/webinar/DataWebinar";
 import TambahWebinar from "./admin/webinar/TambahWebinar";
 import DataKomunitas from "./admin/komunitas/DataKomunitas";
@@ -43,9 +46,11 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<HomeDashboard />} />
       <Route path="/data-mitra" element={<DataMitra />} />
-      <Route path="/data-mitra-tambah" element={<TambahMitra />} />
+      <Route path="/data-mitra/tambah" element={<TambahMitra />} />
+      <Route path="/data-mitra/edit:id" element={<EditMitra />} />
       <Route path="/data-kidspedia" element={<DataKidspedia />} />
-      <Route path="/data-kidspedia-tambah" element={<TambahKidspedia />} />
+      <Route path="/data-kidspedia/tambah" element={<TambahKidspedia />} />
+      <Route path="/data-kidspedia/edit/:id" element={<EditKidspedia />} />
       <Route path="/data-webinar" element={<DataWebinar />} />
       <Route path="/data-webinar-tambah" element={<TambahWebinar />} />
       <Route path="/data-komunitas" element={<DataKomunitas />} />
