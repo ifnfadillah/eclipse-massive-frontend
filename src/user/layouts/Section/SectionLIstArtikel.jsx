@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import CardArtikel from "../components/cardArtikel";
-import JudulFitur from "../components/JudulFitur";
-import Pagination from "../components/paginationUser";
+import CardArtikel from "../../components/cardArtikel";
+import JudulFitur from "../../components/JudulFitur";
+import Pagination from "../../components/paginationUser";
 import { Link } from "react-router-dom";
 
 function ArtikelList() {

@@ -5,9 +5,9 @@ const CTAarticle = () => {
     <div className="section-artikel">
       <SectionCTA
         judul1="Eksplorasi Beragam Informasi Melalui "
-        fitur="Artike "
+        fitur="Artikel"
         deksripsi=" Kumpulan berita seputar parenting untuk orang tua dalam menambah wawasan dan pengetahuan terkait pola asuh kepada anak. Temukan beragam topik mulai dari kesehatan anak, pendidikan, psikologi anak, hingga hubungan keluarga!"
-        imgURL="/assets/Artikel.png"
+        imgURL="/assets/ArticleSection.png"
       >
         Eksplor Artikel
       </SectionCTA>
