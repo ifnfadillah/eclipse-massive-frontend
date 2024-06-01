@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import HomeDashboard from "./admin/dashboard/HomeDashboard";
 import Login from "./admin/login/Login";
 
 import NotFound from "./pages/404";
 import "./index.css";
 // admin
-import DataMitra from "./admin/mitra/DataMitra";
-import TambahMitra from "./admin/mitra/TambahMitra";
-import EditMitra from "./admin/mitra/EditMitra";
+import Dashboard from "./admin/pages/Dashboard";
+import Mitra from "./admin/pages/Mitra";
+import AddMitra from "./admin/mitra/layout/AddMitra";
+import EditMitra from "./admin/mitra/layout/EditMitra";
 import DataKidspedia from "./admin/kidspedia/DataKidspedia";
 import TambahKidspedia from "./admin/kidspedia/TambahKidspedia";
 import EditKidspedia from "./admin/kidspedia/EditKidspedia";
@@ -43,20 +43,28 @@ function App() {
       <Route path="/edukasi/panduanasuh" element={<PanduanAsuh />} />
       <Route path="/artikel-list" element={<ListArticle />} />
       <Route path="/artikel/:id" element={<Artikel />} />
+
+      //ADMIN
       <Route path="/login" element={<Login />} />
-      <Route path="/dashboard" element={<HomeDashboard />} />
-      <Route path="/data-mitra" element={<DataMitra />} />
-      <Route path="/data-mitra/tambah" element={<TambahMitra />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      //ADMIN MITRA
+      <Route path="/data-mitra" element={<Mitra />} />
+      <Route path="/data-mitra/add" element={<AddMitra />} />
       <Route path="/data-mitra/edit:id" element={<EditMitra />} />
+      //ADMIN KIDSPEDIA
       <Route path="/data-kidspedia" element={<DataKidspedia />} />
       <Route path="/data-kidspedia/tambah" element={<TambahKidspedia />} />
       <Route path="/data-kidspedia/edit/:id" element={<EditKidspedia />} />
+      //ADMIN WEBINAR
       <Route path="/data-webinar" element={<DataWebinar />} />
       <Route path="/data-webinar-tambah" element={<TambahWebinar />} />
+      //ADMIN KOMUNITAS
       <Route path="/data-komunitas" element={<DataKomunitas />} />
       <Route path="/data-komunitas-tambah" element={<TambahKomunitas />} />
+      //ADMIN ARTIKEL
       <Route path="/data-artikel" element={<DataArtikel />} />
       <Route path="/data-artikel-tambah" element={<TambahArtikel />} />
+
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

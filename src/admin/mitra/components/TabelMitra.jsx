@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import Button from "./Button";
-import PopupDelete from './pop-up/PopupDelete';
-import Pagination from "./Pagination";
+import Button from '@/admin/components/Button';
+import PopupDelete from '@/admin/components/pop-up/PopupDelete';
+import Pagination from '@/admin/components/Pagination';
 import { Link } from 'react-router-dom';
 
-const Table = ({ headers, data, setData }) => {
+const TableMitra = ({ data, setData, itemName }) => {
     // Pop Up Dialog Hapus
     const [isOpen, setIsOpen] = useState(false);
     const [itemToDelete, setItemToDelete] = useState(null);
 
-    const handleDelete = (index, itemName) => {
+    const handleDelete = (index) => {
         setItemToDelete(index);
         setIsOpen(true);
     };
@@ -49,15 +49,9 @@ const Table = ({ headers, data, setData }) => {
                     <table className="w-full text-sm text-left text-gray-500">
                         <thead className="text-sm text-white font-primary font-medium bg-sky-700">
                             <tr>
-                                {headers.map((header, index) => (
-                                    <th
-                                        key={index}
-                                        scope="col"
-                                        className={`${header.className}`}
-                                    >
-                                        {header.label}
-                                    </th>
-                                ))}
+                                <th scope="col" className="lg:px-10 lg:py-6 px-6 py-3">No</th>
+                                <th scope="col" className="lg:px-12 lg:py-6 px-6 py-3">Nama Mitra</th>
+                                <th scope="col" className="lg:px-12 lg:py-6 px-6 py-3">Logo</th>
                                 <th scope="col" className="lg:px-12 lg:py-6 px-6 py-3">
                                     <span className="sr-only">Action</span>
                                 </th>
@@ -65,8 +59,8 @@ const Table = ({ headers, data, setData }) => {
                         </thead>
                         <tbody>
                             {data.length === 0 ? (
-                                <tr>
-                                    <td colSpan={headers.length + 1} className="text-center p-6 text-gray-500">Belum ada data</td>
+                                <tr className="">
+                                    <td colSpan={data.length + 1} className="text-center p-6 text-gray-500">Belum ada data</td>
                                 </tr>
                             ) : (
                                 renderData().map((row, index) => (
@@ -74,20 +68,20 @@ const Table = ({ headers, data, setData }) => {
                                         {row.map((cell, cellIndex) => (
                                             <td
                                                 key={cellIndex}
-                                                className={`font-primary text-xs font-regular text-gray-800 px-12 py-4 max-w-xs truncate ${headers[cellIndex].className}`}
+                                                className={`font-primary text-xs font-regular text-gray-800 px-12 py-4 max-w-xs truncate ${data[cellIndex].className}`}
                                             >
                                                 {cell}
                                             </td>
                                         ))}
                                         <td className="px-12 py-3 flex items-center justify-end space-x-4">
-                                            <Button
-                                                classname="h-9 w-20 font-secondary text-xs rounded-3xl font-medium bg-amber-300 hover:bg-amber-400 text-black"
-                                                type="button"
-                                            >
-                                                <Link to={`${editPath}/${row[0]}`}>
+                                            <Link key="/data-mitra/edit/">
+                                                <Button
+                                                    classname="h-9 w-20 font-secondary text-xs rounded-3xl font-medium bg-amber-300 hover:bg-amber-400 text-black"
+                                                    type="button"
+                                                >
                                                     Ubah
-                                                </Link>
-                                            </Button>
+                                                </Button>
+                                            </Link>
                                             <Button
                                                 onClick={() => handleDelete(index, row[1])}
                                                 classname="h-9 w-20 font-secondary text-xs rounded-3xl font-medium bg-red-500 hover:bg-red-700 text-white"
@@ -116,10 +110,11 @@ const Table = ({ headers, data, setData }) => {
                 <PopupDelete
                     onConfirm={handleConfirm}
                     onCancel={handleCancel}
+                    itemName={itemName}
                 />
             )}
         </>
     );
 };
 
-export default Table;
+export default TableMitra;
