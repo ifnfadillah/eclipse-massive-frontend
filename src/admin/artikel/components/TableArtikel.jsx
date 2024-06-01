@@ -4,7 +4,7 @@ import PopupDelete from '@/admin/components/pop-up/PopupDelete';
 import Pagination from '@/admin/components/Pagination';
 import { Link } from 'react-router-dom';
 
-const TableMitra = ({ data, setData, itemName }) => {
+const TableArtikel = ({ data, setData, itemName }) => {
     // Pop Up Dialog Hapus
     const [isOpen, setIsOpen] = useState(false);
     const [itemToDelete, setItemToDelete] = useState(null);
@@ -49,10 +49,10 @@ const TableMitra = ({ data, setData, itemName }) => {
                     <table className="w-full text-sm text-left text-gray-500">
                         <thead className="text-sm text-white font-primary font-medium bg-sky-700">
                             <tr>
-                                <th scope="col" className="px-10 py-6 ">No</th>
-                                <th scope="col" className="px-12 py-6 ">Nama Mitra</th>
-                                <th scope="col" className="px-12 py-6 ">Logo</th>
-                                <th scope="col" className="px-12 py-6 ">
+                                <th scope="col" className="px-10 lg:py-6 py-3">No</th>
+                                <th scope="col" className="px-12 lg:py-6 py-3">Judul Bahan Belajar</th>
+                                <th scope="col" className="px-12 lg:py-6 py-3">Kategori</th>
+                                <th scope="col" className="px-12 lg:py-6 py-3">
                                     <span className="sr-only">Action</span>
                                 </th>
                             </tr>
@@ -74,7 +74,7 @@ const TableMitra = ({ data, setData, itemName }) => {
                                             </td>
                                         ))}
                                         <td className="px-12 py-3 flex items-center justify-end space-x-4">
-                                            <Link key="/data-mitra/edit/">
+                                            <Link key="/data-mitra/delete/">
                                                 <Button
                                                     classname="h-9 w-20 font-secondary text-xs rounded-3xl font-medium bg-amber-300 hover:bg-amber-400 text-black"
                                                     type="button"
@@ -117,4 +117,4 @@ const TableMitra = ({ data, setData, itemName }) => {
     );
 };
 
-export default TableMitra;
+export default TableArtikel;

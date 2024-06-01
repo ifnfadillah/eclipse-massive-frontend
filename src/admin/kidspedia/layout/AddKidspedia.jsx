@@ -1,11 +1,11 @@
 import React from "react";
-import Layout from "../layout";
-import Button from "../components/Button";
-import Input from "../components/Input";
-import InputDropdown from "../components/InputDropdown";
+import Layout from "../../layout";
+import Button from "../../components/Button";
+import Input from "../../components/Input";
+import InputDropdown from "../../components/InputDropdown";
 import { Link } from "react-router-dom";
 
-function TambahKidspedia() {
+function AddKidspedia() {
   return (
     <Layout>
       <div className="py-8 px-4 md:mx-52 max-w-xl  lg:py-13">
@@ -38,4 +38,4 @@ function TambahKidspedia() {
   );
 }
 
-export default TambahKidspedia;
+export default AddKidspedia;

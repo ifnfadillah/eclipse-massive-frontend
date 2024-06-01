@@ -1,4 +1,4 @@
-import CardDashboard from "./components/CardDashboard";
+import CardDashboard from "../components/CardDashboard";
 import { Handshake, Baby, UsersRound, Newspaper } from "lucide-react";
 
 const datas = [

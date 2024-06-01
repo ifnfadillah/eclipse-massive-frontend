@@ -5,18 +5,21 @@ import NotFound from "./pages/404";
 import "./index.css";
 // admin
 import Dashboard from "./admin/pages/Dashboard";
-import Mitra from "./admin/pages/Mitra";
+import DataMitra from "./admin/pages/DataMitra";
 import AddMitra from "./admin/mitra/layout/AddMitra";
 import EditMitra from "./admin/mitra/layout/EditMitra";
-import DataKidspedia from "./admin/kidspedia/DataKidspedia";
-import TambahKidspedia from "./admin/kidspedia/TambahKidspedia";
-import EditKidspedia from "./admin/kidspedia/EditKidspedia";
-import DataWebinar from "./admin/webinar/DataWebinar";
-import TambahWebinar from "./admin/webinar/TambahWebinar";
-import DataKomunitas from "./admin/komunitas/DataKomunitas";
-import TambahKomunitas from "./admin/komunitas/TambahKomunitas";
-import DataArtikel from "./admin/artikel/DataArtikel";
-import TambahArtikel from "./admin/artikel/TambahArtikel";
+import DataKidspedia from "./admin/pages/DataKidspedia";
+import AddKidspedia from "./admin/kidspedia/layout/AddKidspedia";
+import EditKidspedia from "./admin/kidspedia/layout/EditKidspedia";
+import DataWebinar from "./admin/pages/DataWebinar";
+import AddWebinar from "./admin/webinar/layout/AddWebinar";
+import EditWebinar from "./admin/webinar/layout/EditWebinar";
+import DataKomunitas from "./admin/pages/DataKomunitas";
+import AddKomunitas from "./admin/komunitas/layout/AddKomunitas";
+import EditKomunitas from "./admin/komunitas/layout/EditKomunitas";
+import DataArtikel from "./admin/pages/DataArtikel";
+import AddArtikel from "./admin/artikel/layout/AddArtikel";
+import EditArtikel from "./admin/artikel/layout/EditArtikel";
 
 // user
 import HomeUser from "./user/pages/home";
@@ -29,6 +32,7 @@ import Komunitas from "./user/pages/komunitas";
 import DetailKomunitas from "./user/pages/DetailKomunitas";
 import DetailWebinar from "./user/pages/DetailWebinar";
 import Artikel from "./user/pages/artikel";
+import { Edit } from "lucide-react";
 
 function App() {
   return (
@@ -48,22 +52,25 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<Dashboard />} />
       //ADMIN MITRA
-      <Route path="/data-mitra" element={<Mitra />} />
+      <Route path="/data-mitra" element={<DataMitra />} />
       <Route path="/data-mitra/add" element={<AddMitra />} />
       <Route path="/data-mitra/edit:id" element={<EditMitra />} />
       //ADMIN KIDSPEDIA
       <Route path="/data-kidspedia" element={<DataKidspedia />} />
-      <Route path="/data-kidspedia/tambah" element={<TambahKidspedia />} />
+      <Route path="/data-kidspedia/add" element={<AddKidspedia />} />
       <Route path="/data-kidspedia/edit/:id" element={<EditKidspedia />} />
       //ADMIN WEBINAR
       <Route path="/data-webinar" element={<DataWebinar />} />
-      <Route path="/data-webinar-tambah" element={<TambahWebinar />} />
+      <Route path="/data-webinar/add" element={<AddWebinar />} />
+      <Route path="/data-webinar/edit/:id" element={<EditWebinar />} />
       //ADMIN KOMUNITAS
       <Route path="/data-komunitas" element={<DataKomunitas />} />
-      <Route path="/data-komunitas-tambah" element={<TambahKomunitas />} />
+      <Route path="/data-komunitas/add" element={<AddKomunitas />} />
+      <Route path="/data-komunitas/edit/:id" element={<EditKomunitas />} />
       //ADMIN ARTIKEL
       <Route path="/data-artikel" element={<DataArtikel />} />
-      <Route path="/data-artikel-tambah" element={<TambahArtikel />} />
+      <Route path="/data-artikel/add" element={<AddArtikel />} />
+      <Route path="/data-artikel/edit/:id" element={<EditArtikel />} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>

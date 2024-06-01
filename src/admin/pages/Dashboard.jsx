@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeDashboard from '../dashboard/HomeDashboard'
+import HomeDashboard from '../dashboard/layout/HomeDashboard';
 import Layout from '../layout';
 
 function Dashboard() {

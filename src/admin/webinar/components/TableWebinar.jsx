@@ -4,7 +4,7 @@ import PopupDelete from '@/admin/components/pop-up/PopupDelete';
 import Pagination from '@/admin/components/Pagination';
 import { Link } from 'react-router-dom';
 
-const TableMitra = ({ data, setData, itemName }) => {
+const TableWebinar = ({ data, setData, itemName }) => {
     // Pop Up Dialog Hapus
     const [isOpen, setIsOpen] = useState(false);
     const [itemToDelete, setItemToDelete] = useState(null);
@@ -50,8 +50,9 @@ const TableMitra = ({ data, setData, itemName }) => {
                         <thead className="text-sm text-white font-primary font-medium bg-sky-700">
                             <tr>
                                 <th scope="col" className="px-10 py-6 ">No</th>
-                                <th scope="col" className="px-12 py-6 ">Nama Mitra</th>
-                                <th scope="col" className="px-12 py-6 ">Logo</th>
+                                <th scope="col" className="px-10 py-6 ">Judul Webinar</th>
+                                <th scope="col" className="px-10 py-6 ">Tanggal</th>
+                                <th scope="col" className="px-10 py-6 ">Harga</th>
                                 <th scope="col" className="px-12 py-6 ">
                                     <span className="sr-only">Action</span>
                                 </th>
@@ -73,8 +74,8 @@ const TableMitra = ({ data, setData, itemName }) => {
                                                 {cell}
                                             </td>
                                         ))}
-                                        <td className="px-12 py-3 flex items-center justify-end space-x-4">
-                                            <Link key="/data-mitra/edit/">
+                                        <td className="px-12  flex items-center justify-end space-x-4">
+                                            <Link key="/data-mitra/delete/">
                                                 <Button
                                                     classname="h-9 w-20 font-secondary text-xs rounded-3xl font-medium bg-amber-300 hover:bg-amber-400 text-black"
                                                     type="button"
@@ -117,4 +118,4 @@ const TableMitra = ({ data, setData, itemName }) => {
     );
 };
 
-export default TableMitra;
+export default TableWebinar;

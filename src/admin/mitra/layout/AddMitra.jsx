@@ -8,10 +8,10 @@ import { Link } from 'react-router-dom'
 function AddMitra() {
     return (
         <Layout>
-            <div className="py-8 px-4 md:mx-52 max-w-xl mx-auto lg:py-13">
+            <div className="py-8 px-4 md:mx-52 max-w-xl  lg:py-13">
                 <h2 className="mb-5 text-2xl font-semibold font-primary text-gray-900">Tambah Mitra</h2>
                 <form action="" method="post">
-                    <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+                    <div className="grid gap-4 grid-cols-2 lg:grid-cols-6 sm:gap-6">
                         <Input text="Nama Mitra" name="judul" type="judul" placeholder="Masukkan nama mitra" />
                         <Input type="file"
                             name="foto"

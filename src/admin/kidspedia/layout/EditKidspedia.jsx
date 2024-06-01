@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Layout from '../layout';
-import Button from '../components/Button';
-import Input from '../components/Input';
-import InputDropdown from '../components/InputDropdown';
+import Layout from '@/admin/layout';
+import Button from '@/admin/components/Button';
+import Input from '@/admin/components/Input';
+import InputDropdown from '@/admin/components/InputDropdown';
 import { Link } from 'react-router-dom';
 
 function EditKidspedia() {
