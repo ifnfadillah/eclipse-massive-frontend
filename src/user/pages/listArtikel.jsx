@@ -1,19 +1,21 @@
-import NavbarHome from "../components/Navbar/NavbarHome";
-import Footer from "../components/Footer";
 import ArtikelList from "../layouts/Section/SectionLIstArtikel";
 import CTAarticle from "../layouts/Section/SectionCTAarticle";
 import Banner from "../components/Banner/BannerArtikel";
+import { useEffect } from "react";
+import LayoutUser from "../layout";
 
-function listArticle() {
+function ListArticle() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="artikel bg-slate-50">
-      <NavbarHome />
+    <LayoutUser>
       <CTAarticle />
       <ArtikelList />
       <Banner />
-      <Footer />
-    </div>
+    </LayoutUser>
   );
 }
 
-export default listArticle;
+export default ListArticle;

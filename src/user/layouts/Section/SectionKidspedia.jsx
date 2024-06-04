@@ -7,9 +7,9 @@ const SectionKidspedia = () => {
         judul1="Temukan Beragam Bahan Belajar Melalui "
         fitur="Kidspedia"
         deksripsi="Jangan khawatir, kami siap membantu Anda mengenali dan memahami gaya pengasuhan yang paling sesuai untuk mendukung tumbuh kembang buah hati Anda secara optimal."
-        imgURL="/assets/Kidspedia.png"
+        imgUrl="/assets/Kidspedia.png"
       >
-        Ikuti Tes
+        Eksplor Kidspedia
       </SectionCTA>
     </div>
   );

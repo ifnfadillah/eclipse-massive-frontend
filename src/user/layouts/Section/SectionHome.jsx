@@ -9,7 +9,7 @@ const CTAHome = () => {
         judul1="Mari Dukung Tumbuh Kembang Anak Bersama "
         fitur="Parentify"
         deksripsi="Tempat terbaik bagi para orang tua untuk mendapatkan edukasi dan panduan dalam mengasuh anak dengan tepat dan mendukung tumbuh kembang anak untuk masa depan yang cerah."
-        imgURL="/assets/Beranda.png"
+        imgUrl="/assets/Beranda.png"
       >
         Eksplor Parentify
       </SectionCTA>

@@ -21,6 +21,14 @@ import Kidspedia from "./user/pages/kidspedia";
 import Sharenting from "./user/pages/sharenting";
 import PanduanAsuh from "./user/pages/panduanasuh";
 import ListArticle from "./user/pages/listArtikel";
+import GayaParenting from "./user/pages/gayaparenting";
+import KenaliGaya from "./user/pages/kenaligaya";
+import Quiz from "./user/pages/quiz";
+import DetailPanduan from "./user/pages/DetailPanduan";
+import HasilQuiz from "./user/pages/hasilquiz";
+import DetailGaya from "./user/pages/DetailGaya";
+import ListVideoBelajar from "./user/pages/listVideoBelajar ";
+import ListMewarnai from "./user/pages/listMewarnai";
 
 function App() {
   return (
@@ -28,8 +36,17 @@ function App() {
       <Route index path="/" element={<HomeUser />} />
       <Route path="/kidspedia" element={<Kidspedia />} />
       <Route path="/sharenting" element={<Sharenting />} />
-      <Route path="/edukasi/panduanasuh" element={<PanduanAsuh />} />
+      <Route path="/edukasi/gaya-parenting" element={<GayaParenting />} />
+      <Route path="/edukasi/kenali-gaya" element={<KenaliGaya />} />
+      <Route path="/edukasi/kenali-gaya/quiz" element={<Quiz />} />
+      <Route path="/edukasi/kenali-gaya/quiz/hasilquiz" element={<HasilQuiz />} />
       <Route path="/artikel" element={<ListArticle />} />
+      <Route path="/edukasi/panduan-asuh" element={<PanduanAsuh />} />
+      <Route path="/edukasi/panduan-asuh/:id" element={<DetailPanduan />} />
+      <Route path="/edukasi/gaya-parenting/:id" element={<DetailGaya />} />
+      <Route path="/list-video" element={<ListVideoBelajar />} />
+      <Route path="/list-mewarnai" element={<ListMewarnai />} />
+
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<HomeDashboard />} />
       <Route path="/data-mitra" element={<DataMitra />} />

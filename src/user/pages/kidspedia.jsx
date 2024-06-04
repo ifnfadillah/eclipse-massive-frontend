@@ -1,18 +1,19 @@
-import NavbarHome from "../components/Navbar/NavbarHome";
 import SectionKidspedia from "../layouts/Section/SectionKidspedia";
 import FeaturesKidspedia from "../layouts/FeaturesKidspedia";
-import Footer from "../components/Footer";
 import BannerKidspedia from "../components/Banner/BannerKidspedia";
+import { useEffect } from "react";
+import LayoutUser from "../layout";
 
 function Kidspedia() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="kidspedia bg-slate-50">
-      <NavbarHome />
+    <LayoutUser>
       <SectionKidspedia />
       <FeaturesKidspedia />
       <BannerKidspedia />
-      <Footer />
-    </div>
+    </LayoutUser>
   );
 }
 

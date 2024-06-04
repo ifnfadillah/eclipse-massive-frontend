@@ -4,7 +4,7 @@ import SectionCTA from "../../components/CTA/SectionCTA";
 const SectionCTA3 = () => {
   return (
     <div className="section">
-      <SectionCTA judul1="Halo" imgURL="./assets/family-section2.png">
+      <SectionCTA judul1="Halo" imgUrl="/assets/.png">
         HAHHA
       </SectionCTA>
     </div>

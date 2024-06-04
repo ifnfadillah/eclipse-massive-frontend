@@ -1,18 +1,19 @@
-import NavbarHome from "../components/Navbar/NavbarHome";
 import SectionSharenting from "../layouts/Section/SectionSharenting";
 import FeaturesSharenting from "../layouts/FeaturesSharenting";
-import Footer from "../components/Footer";
 import BannerKomunitas from "../components/Banner/BannerKomunitas";
+import { useEffect } from "react";
+import LayoutUser from "../layout";
 
 function Sharenting() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="sharenting bg-slate-50">
-      <NavbarHome />
+    <LayoutUser>
       <SectionSharenting />
       <FeaturesSharenting />
       <BannerKomunitas />
-      <Footer />
-    </div>
+    </LayoutUser>
   );
 }
 

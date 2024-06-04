@@ -13,7 +13,7 @@ const NavbarHome = () => {
 
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target) && !buttonRef.current.contains(event.target)) {
-      setIsDropdownOpen(false);
+      setIsDropdownOpen(true);
     }
   };
 
@@ -34,7 +34,7 @@ const NavbarHome = () => {
   const isEdukasiActive = location.pathname.startsWith("/edukasi");
 
   return (
-    <nav className="bg-gradient-to-t from-sky-900 to-sky-600 sticky top-4 md:mx-24 mx-8 border-blue-200 dark:border-gray-600 dark:bg-gray-900 rounded-3xl shadow-lg z-50">
+    <nav className={`bg-gradient-to-t from-sky-900 to-sky-600 sticky top-4 md:mx-24 mx-8 border-blue-200 dark:border-gray-600 dark:bg-gray-900 ${isDropdownOpen ? "rounded-3xl" : "rounded-full"} shadow-lg z-50`}>
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl py-5 px-12">
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="/assets/icon.png" className="h-12" alt="parentify-logo" />
@@ -117,7 +117,7 @@ const NavbarHome = () => {
         <div className="grid max-w-screen-xl px-4 py-10 mx-auto dark:textWhite sm:grid-cols-2 md:grid-cols-3 md:px-6">
           <ul aria-labelledby="mega-menu-full-dropdown-button">
             <li>
-              <Link to="/edukasi/panduanasuh" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
+              <Link to="/edukasi/panduan-asuh" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
                 <img className="object-cover w-full h-8 md:h-auto md:w-24 md:rounded-none md:rounded-s-lg" src="/assets/dropdown1.png" alt="" />
                 <div className="flex flex-col justify-between px-8 leading-normal">
                   <div className="font-semibold">Panduan Pola Asuh Anak</div>
@@ -128,7 +128,7 @@ const NavbarHome = () => {
           </ul>
           <ul>
             <li>
-              <Link to="/edukasi/gayaparenting" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
+              <Link to="/edukasi/gaya-parenting" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
                 <img className="object-cover w-full h-8 md:h-auto md:w-24 md:rounded-none md:rounded-s-lg" src="/assets/dropdown2.png" alt="" />
                 <div className="flex flex-col justify-between px-8 leading-normal">
                   <div className="font-semibold">Gaya Parenting</div>
@@ -139,7 +139,7 @@ const NavbarHome = () => {
           </ul>
           <ul>
             <li>
-              <Link to="/edukasi/kenaligaya" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
+              <Link to="/edukasi/kenali-gaya" className="flex flex-col items-center md:flex-row text-sky-200 hover:text-sky-300">
                 <img className="object-cover w-full h-8 md:h-auto md:w-24 md:rounded-none md:rounded-s-lg" src="/assets/dropdown3.png" alt="" />
                 <div className="flex flex-col justify-between px-8 leading-normal">
                   <div className="font-semibold">Kenali Gaya Parentingmu</div>
