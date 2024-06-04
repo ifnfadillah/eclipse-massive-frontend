@@ -26,6 +26,14 @@ import Komunitas from "./user/pages/komunitas";
 import DetailKomunitas from "./user/pages/DetailKomunitas";
 import DetailWebinar from "./user/pages/DetailWebinar";
 import Artikel from "./user/pages/artikel";
+import GayaParenting from "./user/pages/gayaparenting";
+import KenaliGaya from "./user/pages/kenaligaya";
+import Quiz from "./user/pages/quiz";
+import DetailPanduan from "./user/pages/DetailPanduan";
+import HasilQuiz from "./user/pages/hasilquiz";
+import DetailGaya from "./user/pages/DetailGaya";
+import ListVideoBelajar from "./user/pages/listVideoBelajar ";
+import ListMewarnai from "./user/pages/listMewarnai";
 
 function App() {
   return (
@@ -37,9 +45,18 @@ function App() {
       <Route path="/sharenting-webinar/:id" element={<DetailWebinar />} />
       <Route path="/sharenting-komunitas" element={<Komunitas />} />
       <Route path="/sharenting-komunitas/:id" element={<DetailKomunitas />} />
-      <Route path="/edukasi/panduanasuh" element={<PanduanAsuh />} />
       <Route path="/artikel-list" element={<ListArticle />} />
       <Route path="/artikel/:id" element={<Artikel />} />
+      <Route path="/edukasi/gaya-parenting" element={<GayaParenting />} />
+      <Route path="/edukasi/kenali-gaya" element={<KenaliGaya />} />
+      <Route path="/edukasi/kenali-gaya/quiz" element={<Quiz />} />
+      <Route path="/edukasi/kenali-gaya/quiz/hasilquiz" element={<HasilQuiz />} />
+      <Route path="/edukasi/panduan-asuh" element={<PanduanAsuh />} />
+      <Route path="/edukasi/panduan-asuh/:id" element={<DetailPanduan />} />
+      <Route path="/edukasi/gaya-parenting/:id" element={<DetailGaya />} />
+      <Route path="/list-video" element={<ListVideoBelajar />} />
+      <Route path="/list-mewarnai" element={<ListMewarnai />} />
+
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<HomeDashboard />} />
       <Route path="/data-mitra" element={<DataMitra />} />

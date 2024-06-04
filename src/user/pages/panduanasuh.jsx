@@ -1,18 +1,20 @@
-import NavbarHome from "../components/Navbar/NavbarHome";
 import SectionPanduan from "../layouts/Section/SectionPanduan";
 import SectionCategory from "../layouts/Section/SectionCategory";
-import Footer from "../components/Footer";
+
 import BannerPanduan from "../components/Banner/BannerPanduan";
+import { useEffect } from "react";
+import LayoutUser from "../layout";
 
 function PanduanAsuh() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="panduanAsuh bg-slate-50">
-      <NavbarHome />
+    <LayoutUser>
       <SectionPanduan />
       <SectionCategory />
       <BannerPanduan />
-      <Footer />
-    </div>
+    </LayoutUser>
   );
 }
 

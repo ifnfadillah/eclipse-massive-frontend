@@ -9,7 +9,7 @@ const SectionPanduan = () => {
         judul2="Sesuai Usia Buah Hatimu!"
         deksripsi=" Setiap pertumbuhan usia anak akan memiliki pola asuh yang berbeda-beda untuk menyesuaikan perkembangannya. Pola asuh yang tepat akan berpengaruh terhadap tumbuh kembang anak di masa depan. Sesuaikan pola asuh kepada buah hatimu
         sesuai fase usianya."
-        imgURL="/assets/PanduanPolaAsuh.png"
+        imgUrl="/assets/PanduanPolaAsuh.png"
       >
         Lihat Panduan Pola Asuh
       </SectionCTA>
