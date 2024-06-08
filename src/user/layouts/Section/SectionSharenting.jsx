@@ -8,7 +8,7 @@ const CTASharenting = () => {
         judul1="Temukan Pengetahuan Baru Terkait Parenting di "
         fitur="Sharenting"
         deksripsi="Tempat terbaik bagi para orang tua untuk mendapatkan edukasi dan panduan dalam mengasuh anak dengan tepat dan mendukung tumbuh kembang anak untuk masa depan yang cerah."
-        imgURL="/assets/Sharenting.png"
+        imgUrl="/assets/Sharenting.png"
       >
         Eksplor Sharenting
       </SectionCTA>

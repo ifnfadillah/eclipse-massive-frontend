@@ -1,4 +1,7 @@
 import { useState, useRef, useEffect } from "react";
+import Judul from "../components/Judul";
+import JudulFitur from "../components/JudulFitur";
+import Deskripsi from "../components/Deskripsi";
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -23,13 +26,11 @@ const Faq = () => {
     <div className="faq">
       <section className="bg-slate-50 dark:bg-gray-900 py-16">
         <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-          <div className="mx-auto max-w-screen-lg text-center mb-16 lg:mb-24">
-            <h2 className="mb-4 text-5xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-              Masih Ada Pertanyaan Tentang <strong className="text-blue-700">Parentify</strong>?
-            </h2>
-            <p className="font-light text-gray-800 lg:mb-16 sm:text-xl dark:text-gray-400">
-              Kami bekerja sama dengan beberapa ahli di bidang parenting maupun kesehatan dan mitra atau yayasan terpercaya. Berikut beberapa Mitra yang bekerja sama dengan Parentify.
-            </p>
+          <div className="mx-auto max-w-screen-lg text-center mb-8 lg:mb-12">
+            <Judul>
+              Masih Ada Pertanyaan Tentang <JudulFitur>Parentify</JudulFitur>?
+            </Judul>
+            <Deskripsi>Tenang kami siap membantu pertanyaan Ayah dan Bunda!</Deskripsi>
           </div>
           <div className="flex justify-center">
             <div className="w-full max-w-7xl">

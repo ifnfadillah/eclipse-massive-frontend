@@ -1,4 +1,3 @@
-import CardGizi from "./CardGizi";
 import Deskripsi from "./Deskripsi";
 import Judul from "./Judul";
 import JudulFitur from "./JudulFitur";
@@ -13,7 +12,7 @@ const SectionGizi = ({ usia, children }) => {
         <Deskripsi>Berikut merupakan asupan gizi yang harus terpenuhi pada anak {usia}</Deskripsi>
       </div>
       <div>
-        <div className="flex justify-center space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">{children}</div>
+        <div className="flex justify-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">{children}</div>
       </div>
     </div>
   );

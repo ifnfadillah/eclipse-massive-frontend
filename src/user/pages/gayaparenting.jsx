@@ -1,8 +1,8 @@
 import SectionGayaParenting from "../layouts/Section/SectionGayaParenting";
-import BannerPanduan from "../components/BannerPanduan";
 import SectionCardGaya from "../layouts/Section/SectionCardGaya";
 import { useEffect } from "react";
 import LayoutUser from "../layout";
+import BannerGaya from "../components/Banner/BannerGaya";
 
 function GayaParenting() {
   useEffect(() => {
@@ -12,7 +12,7 @@ function GayaParenting() {
     <LayoutUser>
       <SectionGayaParenting />
       <SectionCardGaya />
-      <BannerPanduan />
+      <BannerGaya />
     </LayoutUser>
   );
 }
