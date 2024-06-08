@@ -1,8 +1,8 @@
 const CardMitra = ({ imgUrl, nama }) => {
   return (
-    <div className="max-w-sm bg-transparent border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="max-w-sm bg-transparent md:max-w-md sm:max-w-full">
       <a href="#">
-        <img className="rounded-lg flex items-center" src={imgUrl} alt={nama} />
+        <img className="w-full h-auto object-cover flex items-center" src={imgUrl} alt={nama} />
       </a>
       <div className="p-5 text-center">
         <a href="#" className="flex justify-center items-center">

@@ -22,15 +22,15 @@ const SectionVideo = () => {
   };
   return (
     <div className="section-kategori-usia">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 mb-32">
-        <div className="mx-auto max-w-screen-lg text-center mb-16 lg:mb-24">
+      <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <div className="mx-auto max-w-screen-lg text-center lg:mb-8">
           <Judul>Video Belajar</Judul>
           <Deskripsi>Berikut beberapa video belajar yang dapat diakses oleh Parennials!</Deskripsi>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-1 gap-y-8 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-1 gap-y-1 ">
           {renderData().map((video) => (
             <Link key={video.id} to={video.link} target="_blank" rel="noopener noreferrer" className="flex items-center px-2">
-              <CardVideo imageUrl={video.imageCard} title={video.title} />
+              <CardVideo imageUrl={video.imageCard} title={video.title} link={video.link} />
             </Link>
           ))}
         </div>

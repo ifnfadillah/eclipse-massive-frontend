@@ -1,6 +1,5 @@
 import ArtikelList from "../layouts/Section/SectionLIstArtikel";
 import CTAarticle from "../layouts/Section/SectionCTAarticle";
-import Banner from "../components/Banner/BannerArtikel";
 import { useEffect } from "react";
 import LayoutUser from "../layout";
 
@@ -13,7 +12,6 @@ function ListArticle() {
     <LayoutUser>
       <CTAarticle />
       <ArtikelList />
-      <Banner />
     </LayoutUser>
   );
 }

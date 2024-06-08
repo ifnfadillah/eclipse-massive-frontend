@@ -2,6 +2,7 @@ import BannerPanduan from "../components/BannerPanduan";
 import SectionKenaliGaya from "../layouts/Section/SectionKenaliGaya";
 import { useEffect } from "react";
 import LayoutUser from "../layout";
+import BannerKenali from "../components/Banner/BannerKenali";
 
 function KenaliGaya() {
   useEffect(() => {
@@ -10,7 +11,7 @@ function KenaliGaya() {
   return (
     <LayoutUser>
       <SectionKenaliGaya />
-      <BannerPanduan />
+      <BannerKenali />
     </LayoutUser>
   );
 }

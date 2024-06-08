@@ -104,7 +104,7 @@ const NavbarHome = () => {
               <Link
                 to="/artikel-list"
                 className={`block py-2 px-3 border-b border-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:textWhite md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
-                  isActiveLink("/artikel") ? "text-gray-50 underline underline-offset-8 underline-mb-4 decoration-4 decoration-white" : "text-sky-200 hover:text-sky-300"
+                  isActiveLink("/artikel-list") ? "text-gray-50 underline underline-offset-8 underline-mb-4 decoration-4 decoration-white" : "text-sky-200 hover:text-sky-300"
                 }`}
               >
                 Artikel

@@ -1,7 +1,7 @@
 import Banners from "../Banners";
 
-const BannerPanduan = () => {
+const BannerArtikel = () => {
   return <Banners imgUrl="/assets/BannerArtikel.png" />;
 };
 
-export default BannerPanduan;
+export default BannerArtikel;

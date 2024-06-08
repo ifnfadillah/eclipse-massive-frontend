@@ -5,12 +5,12 @@ import { Link, useParams } from "react-router-dom";
 import SectionPola from "../components/SectionPola";
 import CardPerilaku from "../components/CardPerilaku";
 import SectionParaAhli from "../components/SectionParaAhli";
-import BannerDetailPanduan from "../components/Banner/BannerDetailPanduan";
 import { gayaParenting } from "../layouts/Data/gayaParenting";
 import Judul from "../components/Judul";
 import JudulFitur from "../components/JudulFitur";
 import ButtonCTA2 from "../components/CTA/Button/ButtonCTA2";
 import CardCategory from "../components/CardCategory";
+import BannerGaya from "../components/Banner/BannerGaya";
 
 const DetailGaya = () => {
   useEffect(() => {
@@ -64,7 +64,7 @@ const DetailGaya = () => {
           </div>
         </div>
         <div>
-          <BannerDetailPanduan />
+          <BannerGaya />
         </div>
       </div>
     </LayoutUser>

@@ -12,7 +12,7 @@ const SectionMitra = () => {
       <div className="flex items-center justify-center py-4">
         <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-2 md:gap-12 md:space-y-0">
           <CardMitra imgUrl="/assets/mitra1.png" nama="KARYA Kreatif GURU Paud" />
-          <CardMitra imgUrl="/assets/mitra2.png" nama="Guru SD" />
+          <CardMitra imgUrl="/assets/mitra2.png" nama="Guru SD.id" />
         </div>
       </div>
     </div>

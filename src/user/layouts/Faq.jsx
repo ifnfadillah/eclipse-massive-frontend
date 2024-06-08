@@ -1,4 +1,7 @@
 import { useState, useRef, useEffect } from "react";
+import Judul from "../components/Judul";
+import JudulFitur from "../components/JudulFitur";
+import Deskripsi from "../components/Deskripsi";
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -60,8 +63,9 @@ const Faq = () => {
                 <h3 id={`accordion-collapse-heading-${index}`}>
                   <button
                     type="button"
-                    className={`flex items-center justify-between w-full p-6 font-primary font-medium md:text-2xl text-left bg-white border-b-0 shadow-lg transition-colors duration-300 ${activeIndex === index ? "text-sky-500 rounded-t-lg" : "text-sky-900 rounded-lg"
-                      }`}
+                    className={`flex items-center justify-between w-full p-6 font-primary font-medium md:text-2xl text-left bg-white border-b-0 shadow-lg transition-colors duration-300 ${
+                      activeIndex === index ? "text-sky-500 rounded-t-lg" : "text-sky-900 rounded-lg"
+                    }`}
                     onClick={() => handleToggle(index)}
                     aria-expanded={activeIndex === index}
                     aria-controls={`accordion-collapse-body-${index}`}
