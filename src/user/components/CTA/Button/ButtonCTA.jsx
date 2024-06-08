@@ -3,7 +3,7 @@ const ButtonCTA = (props) => {
   return (
     <a
       href="#"
-      className="inline-flex items-center justify-center font-primary shadow-md focus:outline-none text-white bg-sky-700 hover:bg-blue-500 focus:bg-blue-900 font-medium rounded-lg text-lg px-5 py-2.5 me-2 mb-2 transition duration-300 ease-in-out"
+      className="inline-flex items-center justify-center font-primary shadow-md focus:outline-none text-white bg-sky-700 hover:bg-blue-500 focus:bg-blue-900 font-normal rounded-lg text-md md:text-lg w-full md:w-auto md:px-5 py-3 md:py-2.5 me-2 mb-2 transition duration-300 ease-in-out"
     >
       {children}
       <svg

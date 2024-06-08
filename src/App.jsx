@@ -16,7 +16,7 @@ import DataArtikel from "./admin/artikel/DataArtikel";
 import TambahArtikel from "./admin/artikel/TambahArtikel";
 
 // user
-import HomeUser from "./user/pages/home";
+import HomeUser from "./user/pages/HomeUser";
 import Kidspedia from "./user/pages/kidspedia";
 import Sharenting from "./user/pages/sharenting";
 import Webinar from "./user/pages/webinar";

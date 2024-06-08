@@ -26,25 +26,22 @@ const testimonials = [
 
 const Testimonial = () => {
   return (
-    <div className="testimonial">
-      <section className="bg-slate-50 dark:bg-gray-900">
-        <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 mb-32">
-          <div className="mx-auto max-w-screen-lg text-center mb-16 lg:mb-24">
-            <Judul>
-              Kata Mereka tentang <JudulFitur>Parentify</JudulFitur>
-            </Judul>
-            <Deskripsi>Parentify telah dipercaya oleh para orang tua dan ahli dari berbagai kalangan.</Deskripsi>
-          </div>
-          <div>
-            <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-              {testimonials.map((testimonial, index) => (
-                <CardTestimonial key={index} imgUrl={testimonial.imgUrl} nama={testimonial.nama} pekerjaan={testimonial.pekerjaan} deksripsi={testimonial.deksripsi} />
-              ))}
-            </div>
-          </div>
+    <div className=" px-4 mx-auto max-w-screen-xl py-16 lg:px-6">
+      <div className="mx-auto max-w-screen-lg text-center">
+        <Judul>
+          Kata Mereka tentang <JudulFitur>Parentify</JudulFitur>
+        </Judul>
+        <Deskripsi>Parentify telah dipercaya oleh para orang tua dan ahli dari berbagai kalangan.</Deskripsi>
+      </div>
+      <div>
+        <div className="space-y-12 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0 py-8">
+          {testimonials.map((testimonial, index) => (
+            <CardTestimonial key={index} imgUrl={testimonial.imgUrl} nama={testimonial.nama} pekerjaan={testimonial.pekerjaan} deksripsi={testimonial.deksripsi} />
+          ))}
         </div>
-      </section>
+      </div>
     </div>
+
   );
 };
 

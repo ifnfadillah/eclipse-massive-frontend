@@ -3,7 +3,6 @@ import FeaturesHome from "../layouts/FeaturesHome";
 import Testimonial from "../layouts/Testimonial";
 import VideoShowcase from "../layouts/VideoShowcase";
 import Faq from "../layouts/Faq";
-
 import SectionMitra from "../layouts/Section/SectionMitra";
 import { useEffect } from "react";
 import LayoutUser from "../layout";
