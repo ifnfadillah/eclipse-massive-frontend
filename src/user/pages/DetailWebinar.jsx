@@ -112,7 +112,7 @@ function DetailWebinar() {
                         <h3 className="text-sm font-medium">Pukul: <span className="text-sm font-normal">{webinar.time}</span></h3>
                         <h3 className="text-sm font-medium">Harga: <span className="text-sm font-normal">{webinar.price}</span></h3>
                         <button
-                            className="px-5 py-3 font-primary text-sm font-medium bg-sky-700 rounded-lg md:rounded-xl shadow border-2 text-white hover:bg-sky-900"
+                            className="w-full inline-flex items-center justify-center md:w-auto md:px-5 py-3 font-primary text-sm font-medium bg-sky-700 rounded-lg md:rounded-xl shadow border-2 text-white hover:bg-sky-900"
                             type=""
                             name="daftar"
                         >
@@ -132,8 +132,7 @@ function DetailWebinar() {
                     </div>
                 </div>
 
-                {/* List Artikel */}
-                <div className="containersm:py-16">
+                <div className="sm:py-16">
                     <div className="flex flex-row justify-between mb-10 text-center sm:text-left items-center">
                         <h1 className="lg:text-3xl text-2xl font-primary font-semibold ">
                             Komunitas Lainnya
@@ -143,7 +142,7 @@ function DetailWebinar() {
                             type="navigate"
                             name="selengkapnya"
                         >
-                            <Link to="/sharenting-komunitas" className="flex items-center">
+                            <Link to="/sharenting-webinar" className="flex items-center">
                                 Selengkapnya
                                 <svg className="w-5 h-5 ml-2 -mr-1 transition duration-300 ease-in-out" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>

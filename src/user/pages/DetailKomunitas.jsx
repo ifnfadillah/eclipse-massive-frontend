@@ -91,7 +91,7 @@ function DetailKomunitas() {
                             {community.description}
                         </p>
                         <button
-                            className="px-5 py-3 font-primary text-sm font-medium bg-sky-700 rounded-lg md:rounded-xl shadow border-2 text-white hover:bg-sky-900"
+                            className="w-full inline-flex items-center justify-center md:w-auto md:px-5 py-3 font-primary text-sm font-medium bg-sky-700 rounded-lg md:rounded-xl shadow border-2 text-white hover:bg-sky-900"
                             type=""
                             name="daftar"
                         >

@@ -18,7 +18,7 @@ import TambahArtikel from "./admin/artikel/TambahArtikel";
 // user
 import HomeUser from "./user/pages/HomeUser";
 import Kidspedia from "./user/pages/kidspedia";
-import Sharenting from "./user/pages/sharenting";
+import Sharenting from "./user/pages/Sharenting";
 import Webinar from "./user/pages/webinar";
 import PanduanAsuh from "./user/pages/panduanasuh";
 import ListArticle from "./user/pages/listArtikel";
